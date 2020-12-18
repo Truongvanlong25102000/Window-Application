@@ -56,8 +56,9 @@ namespace WindowsFormsApp1.View.Screen
             this.headerHome.Location = new System.Drawing.Point(0, 0);
             this.headerHome.Name = "headerHome";
             this.headerHome.ShadowDecoration.Parent = this.headerHome;
-            this.headerHome.Size = new System.Drawing.Size(733, 160);
+            this.headerHome.Size = new System.Drawing.Size(1198, 160);
             this.headerHome.TabIndex = 3;
+            this.headerHome.Paint += new System.Windows.Forms.PaintEventHandler(this.headerHome_Paint);
             // 
             // pictureBox1
             // 
@@ -68,6 +69,7 @@ namespace WindowsFormsApp1.View.Screen
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // guna2PictureBox4
             // 
@@ -82,6 +84,7 @@ namespace WindowsFormsApp1.View.Screen
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox4.TabIndex = 4;
             this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
             // 
             // guna2PictureBox3
             // 
@@ -93,6 +96,7 @@ namespace WindowsFormsApp1.View.Screen
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox3.TabIndex = 3;
             this.guna2PictureBox3.TabStop = false;
+            this.guna2PictureBox3.Click += new System.EventHandler(this.guna2PictureBox3_Click);
             // 
             // guna2PictureBox2
             // 
@@ -141,17 +145,19 @@ namespace WindowsFormsApp1.View.Screen
             // flowLayoutProduct
             // 
             this.flowLayoutProduct.BackColor = System.Drawing.Color.White;
-            this.flowLayoutProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutProduct.Location = new System.Drawing.Point(0, 160);
             this.flowLayoutProduct.Name = "flowLayoutProduct";
-            this.flowLayoutProduct.Size = new System.Drawing.Size(733, 387);
+            this.flowLayoutProduct.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.flowLayoutProduct.Size = new System.Drawing.Size(1198, 712);
             this.flowLayoutProduct.TabIndex = 4;
+            this.flowLayoutProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutProduct_Paint);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(733, 547);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1198, 872);
             this.Controls.Add(this.flowLayoutProduct);
             this.Controls.Add(this.headerHome);
             this.Name = "Home";

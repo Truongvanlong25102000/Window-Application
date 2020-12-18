@@ -13,15 +13,17 @@ using FireSharp.Interfaces;
 using FireSharp.Response;
 using WindowsFormsApp1.Models;
 using WindowsFormsApp1.View.Screen;
+using WindowsFormsApp1.Interface;
 
 namespace WindowsFormsApp1
 {
    
     public partial class formParent : Form
     {
-        private int poss =40;
+       
         private bool drag=false;
         private Point startPoint = new Point(0, 0);
+        ViewProduct viewProduct;
         
 
         IFirebaseConfig config = new FirebaseConfig
@@ -51,19 +53,12 @@ namespace WindowsFormsApp1
             btnFinace.Location = new Point(loactionButtonMenu, btnFinace.Location.Y);
             btnLogout.Location = new Point(loactionButtonMenu, btnLogout.Location.Y);
 
-            flowLayoutPanel.Size = new Size(969-234,480);
-            flowLayoutProduct.Size = new Size(755, 480);//735
-            flowLayoutProduct.AutoScrollPosition = new Point(0, 0);
-
-            Dictionary<String, ItemProduct> mapProduct = new Dictionary<string, ItemProduct>();
-            for(int i=0;i<20;i++){
-                mapProduct.Add(i.ToString(), new ItemProduct());
-            }
-            PopularItem(mapProduct);
+            openChildForm(new Home());
+            //this.panelUser.Visible = false;
         }
 
 
-        private void openChildForm(Form childForm)
+        private async void openChildForm(Form childForm)
         {
             if (currentChildForm != null)
             {
@@ -72,9 +67,9 @@ namespace WindowsFormsApp1
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.Controls.Add(childForm);
-            this.Tag = childForm;
+           
+            this.guna2Panel2.Controls.Add(childForm);
+            this.guna2Panel2.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
 
@@ -87,27 +82,13 @@ namespace WindowsFormsApp1
            // PopularItem(product);
         }
 
-        private void PopularItem(Dictionary<String,ItemProduct> mapProduct)
-        {
-            List<ItemProduct> arrItemProduct = new List<ItemProduct>();
-            foreach (ItemProduct item in mapProduct.Values)
-            {
-                //arrItemProduct.Add(new ItemProduct(item));
-               // ItemProduct product = new ItemProduct(item);
-                flowLayoutProduct.Controls.Add(item);
-                item.Top = poss;
-                poss = (item.Top + item.Height + 40);
-            }
-            flowLayoutProduct.AutoScroll = true;
-            flowLayoutProduct.VerticalScroll.Visible = false;
-            flowLayoutProduct.VerticalScroll.Enabled = false;
-
-        }
+       
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             btnDashBoard.Checked = true;
             setCheckedButton(btnDashBoard);
+            openChildForm(new Home());
         }
 
         private void lbNameStore_Click(object sender, EventArgs e)
@@ -130,8 +111,20 @@ namespace WindowsFormsApp1
         {
             btnFinace.Checked = true;
             setCheckedButton(btnFinace);
-            openChildForm(new DetailProductForm());
+            // openChildForm(new DetailProductForm());
+
            
+
+            Form childForm = new DetailProductForm(this.panelUser);
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+
+            this.guna2Panel2.Controls.Add(childForm);
+            this.guna2Panel2.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

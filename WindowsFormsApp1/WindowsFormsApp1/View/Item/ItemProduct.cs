@@ -12,10 +12,11 @@ using WindowsFormsApp1.View.Screen;
 
 namespace WindowsFormsApp1.View.Item
 {
+    public delegate void DataSendHandler(bool isClick);
     public partial class ItemProduct : UserControl
     {
         Product product;
-       
+        public event DataSendHandler dataSend;
 
         public ItemProduct()
         {
@@ -30,6 +31,8 @@ namespace WindowsFormsApp1.View.Item
             imageProduct.Size = new Size(100, 85);
             imageProduct.Load(this.product.image);
             nameProduct.Text= this.product.name;
+
+            
         }
 
        
@@ -38,14 +41,14 @@ namespace WindowsFormsApp1.View.Item
         {
 
         }
+      
 
-        private void imageProduct_Click(object sender, EventArgs e)
+        private void ViewDetailProduct(object sender, MouseEventArgs e)
         {
-           // DetailProductForm form = new DetailProductForm();
-            //form.Show();
+            this.dataSend(true);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void nameStore_Click(object sender, EventArgs e)
         {
 
         }
