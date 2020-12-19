@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
    
     public partial class formParent : Form
     {
+        
        
         private bool drag=false;
         private Point startPoint = new Point(0, 0);
@@ -79,10 +80,11 @@ namespace WindowsFormsApp1
             FirebaseResponse response = await client.GetTaskAsync("product/");
             mapProduct = response.ResultAs<Dictionary<string, Product>>();
 
-            foreach(String product in mapProduct.Keys)
+            foreach(Product product in mapProduct.Values)
             {
-                System.Console.WriteLine("HEHEHEH: "+product);
+                System.Console.WriteLine("HEHEHEH: "+product.directoryId);
             }
+            home = new Home(mapProduct);
             Form childForm = new Home(mapProduct);
             if (currentChildForm != null)
             {

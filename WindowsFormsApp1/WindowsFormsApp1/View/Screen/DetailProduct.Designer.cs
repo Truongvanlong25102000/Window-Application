@@ -180,6 +180,7 @@ namespace WindowsFormsApp1.View.Screen
             this.imageProduct2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageProduct2.TabIndex = 19;
             this.imageProduct2.TabStop = false;
+            this.imageProduct2.Click += new System.EventHandler(this.imageProduct2_Click);
             // 
             // guna2Elipse3
             // 
@@ -209,7 +210,7 @@ namespace WindowsFormsApp1.View.Screen
             this.imageProduct.Name = "imageProduct";
             this.imageProduct.ShadowDecoration.Parent = this.imageProduct;
             this.imageProduct.Size = new System.Drawing.Size(355, 351);
-            this.imageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.imageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageProduct.TabIndex = 15;
             this.imageProduct.TabStop = false;
             this.imageProduct.Click += new System.EventHandler(this.imageProduct_Click_1);
@@ -245,6 +246,7 @@ namespace WindowsFormsApp1.View.Screen
             this.lbAddressStore.Size = new System.Drawing.Size(281, 20);
             this.lbAddressStore.TabIndex = 28;
             this.lbAddressStore.Text = "123 Main Street, New York, NY 10030 ";
+            this.lbAddressStore.Click += new System.EventHandler(this.lbAddressStore_Click);
             // 
             // label2
             // 

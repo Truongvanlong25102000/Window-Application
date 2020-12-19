@@ -8,8 +8,9 @@ namespace WindowsFormsApp1.Models
 {
     public class Product
     {
-        public string id { get; set; }
-        public string directory { get; set; }
+        public string description { get; set; }
+        public string directoryId { get; set; }
+        public string idStore { get; set; }
         public Dictionary<string,string> image { get; set; }
         public string nameProduct { get; set; }
         public string nameStore { get; set; }
@@ -19,7 +20,7 @@ namespace WindowsFormsApp1.Models
 
         public Product(string directory,Dictionary<string,string> image, string nameProduct,string nameStore, string price)
         {
-            this.directory = directory;
+            this.directoryId = directory;
             this.image = image;
             this.nameProduct = nameProduct;
             this.nameStore = nameStore;

@@ -23,7 +23,7 @@ namespace WindowsFormsApp1.View.Screen
         {
             InitializeComponent();
             this.mapProduct = mapProduct;
-            Dictionary<String, ItemProduct> mapProduct1 = new Dictionary<string, ItemProduct>();
+            Dictionary<string, ItemProduct> mapProduct1 = new Dictionary<string, ItemProduct>();
 
             foreach (Product product in mapProduct.Values)
             {
@@ -34,7 +34,18 @@ namespace WindowsFormsApp1.View.Screen
             PopularItem(mapProduct1);
         }
 
-        
+        private void Item_dataSend(bool isClick, Product product)
+        {
+            Form childForm = new DetailProductForm(product);
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+
+            this.Controls.Add(childForm);
+            //Home.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         private void Home_Load(object sender, EventArgs e)
         {
@@ -45,22 +56,6 @@ namespace WindowsFormsApp1.View.Screen
 
             
 
-        }
-
-        private void Item_dataSend(bool isClick)
-        {
-            //flowLayoutProduct.Visible = false;
-            // flowLayoutProduct.Controls.Clear();
-            // flowLayoutProduct.Controls.Add(new DetailProductForm());
-            Form childForm = new DetailProductForm();
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-
-            this.Controls.Add(childForm);
-           //Home.Controls.Add(childForm);
-            this.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
         }
 
         private void headerHome_Paint(object sender, PaintEventArgs e)

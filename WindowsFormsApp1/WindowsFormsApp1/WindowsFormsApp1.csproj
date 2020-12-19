@@ -68,6 +68,7 @@
     <Compile Include="Interface\ViewProduct.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Store.cs" />
     <Compile Include="View\Item\ItemAddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>

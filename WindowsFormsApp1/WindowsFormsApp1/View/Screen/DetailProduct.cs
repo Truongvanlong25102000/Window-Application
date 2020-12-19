@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Models;
 using WindowsFormsApp1.View.Item;
 
 namespace WindowsFormsApp1.View.Screen
@@ -14,11 +15,40 @@ namespace WindowsFormsApp1.View.Screen
     public partial class DetailProductForm : Form
     {
         Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser;
-
+        List<String> listImage=new List<string>();
+        Product product;
         public DetailProductForm()
         {
             InitializeComponent();
         }
+
+        public DetailProductForm(Product product)
+        {
+            InitializeComponent();
+            this.product = product;
+            loadData();
+        }
+
+        async private void loadData()
+        {
+            foreach(string i in product.image.Values)
+            {
+                listImage.Add(i);
+            }
+            this.imageProduct.LoadAsync(listImage[0]);
+            this.imageProduct1.LoadAsync(listImage[0]);
+            if (listImage.Count >= 2)
+            {
+                this.imageProduct2.LoadAsync(listImage[1]);
+                this.imageProduct3.LoadAsync(listImage[2]);
+            }
+
+            this.nameProduct.Text = product.nameProduct;
+            this.priceProduct.Text = product.price;
+            this.description.Text = product.description;
+
+        }
+
         public DetailProductForm(Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser)
         {
             InitializeComponent();
@@ -32,9 +62,6 @@ namespace WindowsFormsApp1.View.Screen
             this.HeaderDetailProduct.Size = new Size(850, 340);//880,603//880 310
             this.flowLayoutParent.Size = new Size(850, 603);
             this.imgBack.Size = new Size(26,26);
-            this.description.Text = "Hamburgers are traditionally made with ground beef and served with onions, tomatoes, lettuce, ketchup, and other garnishes. You can also make a hamburger with turkey or other kinds of meat — although rarely, if ever, is ham used in a hamburger. Hamburgers were originally called hamburg steak,named for the German city of Hamburg, although no actual connection between the place and the food has ever been documented.";
-            this.imageProduct.Load("https://daylambanh.edu.vn/wp-content/uploads/2020/10/cong-thuc-lam-hamburger.jpg");
-            this.priceProduct.Text = "0.5$";
             addComment();
         }
 
@@ -121,6 +148,16 @@ namespace WindowsFormsApp1.View.Screen
         }
 
         private void btnBuy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbAddressStore_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void imageProduct2_Click(object sender, EventArgs e)
         {
 
         }
