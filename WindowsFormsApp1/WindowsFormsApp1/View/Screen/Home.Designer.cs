@@ -31,14 +31,12 @@ namespace WindowsFormsApp1.View.Screen
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.headerHome = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.headerHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -47,7 +45,6 @@ namespace WindowsFormsApp1.View.Screen
             // headerHome
             // 
             this.headerHome.BackColor = System.Drawing.Color.White;
-            this.headerHome.Controls.Add(this.pictureBox1);
             this.headerHome.Controls.Add(this.guna2PictureBox4);
             this.headerHome.Controls.Add(this.guna2PictureBox3);
             this.headerHome.Controls.Add(this.guna2PictureBox2);
@@ -59,17 +56,6 @@ namespace WindowsFormsApp1.View.Screen
             this.headerHome.Size = new System.Drawing.Size(1198, 160);
             this.headerHome.TabIndex = 3;
             this.headerHome.Paint += new System.Windows.Forms.PaintEventHandler(this.headerHome_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(749, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // guna2PictureBox4
             // 
@@ -141,6 +127,7 @@ namespace WindowsFormsApp1.View.Screen
             this.guna2TextBox2.Size = new System.Drawing.Size(350, 56);
             this.guna2TextBox2.TabIndex = 1;
             this.guna2TextBox2.TextOffset = new System.Drawing.Point(10, 0);
+            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // flowLayoutProduct
             // 
@@ -164,7 +151,6 @@ namespace WindowsFormsApp1.View.Screen
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.headerHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
@@ -175,7 +161,6 @@ namespace WindowsFormsApp1.View.Screen
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel headerHome;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;

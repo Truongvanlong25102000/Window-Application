@@ -33,37 +33,19 @@ namespace WindowsFormsApp1.View.Item
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ItemProduct));
-            this.imageProduct = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.nameProduct = new System.Windows.Forms.Label();
             this.priceProduct = new System.Windows.Forms.Label();
             this.nameStore = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.imageProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct)).BeginInit();
             this.SuspendLayout();
-            // 
-            // imageProduct
-            // 
-            this.imageProduct.Dock = System.Windows.Forms.DockStyle.Top;
-            this.imageProduct.FillColor = System.Drawing.Color.White;
-            this.imageProduct.Image = ((System.Drawing.Image)(resources.GetObject("imageProduct.Image")));
-            this.imageProduct.Location = new System.Drawing.Point(0, 0);
-            this.imageProduct.Name = "imageProduct";
-            this.imageProduct.ShadowDecoration.Parent = this.imageProduct;
-            this.imageProduct.Size = new System.Drawing.Size(162, 110);
-            this.imageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageProduct.TabIndex = 0;
-            this.imageProduct.TabStop = false;
-            this.imageProduct.Click += new System.EventHandler(this.imageProduct_Click);
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.TargetControl = this;
             // 
             // nameProduct
             // 
             this.nameProduct.AutoSize = true;
             this.nameProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameProduct.Location = new System.Drawing.Point(3, 127);
+            this.nameProduct.Location = new System.Drawing.Point(6, 190);
             this.nameProduct.Name = "nameProduct";
             this.nameProduct.Size = new System.Drawing.Size(109, 25);
             this.nameProduct.TabIndex = 1;
@@ -74,7 +56,7 @@ namespace WindowsFormsApp1.View.Item
             // 
             this.priceProduct.AutoSize = true;
             this.priceProduct.ForeColor = System.Drawing.Color.DimGray;
-            this.priceProduct.Location = new System.Drawing.Point(7, 165);
+            this.priceProduct.Location = new System.Drawing.Point(7, 228);
             this.priceProduct.Name = "priceProduct";
             this.priceProduct.Size = new System.Drawing.Size(40, 20);
             this.priceProduct.TabIndex = 2;
@@ -85,12 +67,30 @@ namespace WindowsFormsApp1.View.Item
             // 
             this.nameStore.AutoSize = true;
             this.nameStore.ForeColor = System.Drawing.Color.DimGray;
-            this.nameStore.Location = new System.Drawing.Point(7, 196);
+            this.nameStore.Location = new System.Drawing.Point(7, 262);
             this.nameStore.Name = "nameStore";
             this.nameStore.Size = new System.Drawing.Size(109, 20);
             this.nameStore.TabIndex = 3;
             this.nameStore.Text = "Burger Queen";
             this.nameStore.Click += new System.EventHandler(this.nameStore_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // imageProduct
+            // 
+            this.imageProduct.Dock = System.Windows.Forms.DockStyle.Top;
+            this.imageProduct.FillColor = System.Drawing.Color.White;
+            this.imageProduct.Image = ((System.Drawing.Image)(resources.GetObject("imageProduct.Image")));
+            this.imageProduct.Location = new System.Drawing.Point(0, 0);
+            this.imageProduct.Name = "imageProduct";
+            this.imageProduct.ShadowDecoration.Parent = this.imageProduct;
+            this.imageProduct.Size = new System.Drawing.Size(220, 175);
+            this.imageProduct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageProduct.TabIndex = 0;
+            this.imageProduct.TabStop = false;
+            this.imageProduct.Click += new System.EventHandler(this.imageProduct_Click);
             // 
             // ItemProduct
             // 
@@ -105,8 +105,9 @@ namespace WindowsFormsApp1.View.Item
             this.Margin = new System.Windows.Forms.Padding(3, 3, 20, 40);
             this.Name = "ItemProduct";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Size = new System.Drawing.Size(162, 238);
+            this.Size = new System.Drawing.Size(220, 293);
             this.Load += new System.EventHandler(this.ItemProduct_Load);
+            this.Click += new System.EventHandler(this.ItemProduct_Click);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ViewDetailProduct);
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct)).EndInit();
             this.ResumeLayout(false);
@@ -116,25 +117,25 @@ namespace WindowsFormsApp1.View.Item
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-           
+            this.dataSend(true);
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            
+            this.dataSend(true);
         }
 
         private void imageProduct_Click(object sender, EventArgs e)
         {
-            
+            this.dataSend(true);
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2PictureBox imageProduct;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label nameProduct;
         private System.Windows.Forms.Label priceProduct;
         private System.Windows.Forms.Label nameStore;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2PictureBox imageProduct;
     }
 }

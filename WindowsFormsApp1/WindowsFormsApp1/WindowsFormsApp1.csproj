@@ -66,12 +66,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\ViewProduct.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="View\Item\ItemAddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\Item\ItemAddProduct.Designer.cs">
       <DependentUpon>ItemAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Item\ItemComment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Item\ItemComment.Designer.cs">
+      <DependentUpon>ItemComment.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Item\ItemProduct.cs">
       <SubType>UserControl</SubType>
@@ -84,6 +91,12 @@
     </Compile>
     <Compile Include="View\Screen\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Screen\LoginRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Screen\LoginRegister.Designer.cs">
+      <DependentUpon>LoginRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Screen\Main.cs">
       <SubType>Form</SubType>
@@ -111,6 +124,9 @@
     <EmbeddedResource Include="View\Item\ItemAddProduct.resx">
       <DependentUpon>ItemAddProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Item\ItemComment.resx">
+      <DependentUpon>ItemComment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Item\ItemProduct.resx">
       <DependentUpon>ItemProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Screen\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Screen\LoginRegister.resx">
+      <DependentUpon>LoginRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Screen\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

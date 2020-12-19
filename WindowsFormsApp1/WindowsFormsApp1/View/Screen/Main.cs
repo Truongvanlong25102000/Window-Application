@@ -23,9 +23,8 @@ namespace WindowsFormsApp1
        
         private bool drag=false;
         private Point startPoint = new Point(0, 0);
-        ViewProduct viewProduct;
-        
-
+        public Dictionary<string, Product> mapProduct;
+        public Home home;
         IFirebaseConfig config = new FirebaseConfig
         {
             AuthSecret = "ODk7Qlr8hR80rttKSI41lfaYR7ywCvCBo9XEUfIH",
@@ -37,9 +36,8 @@ namespace WindowsFormsApp1
 
         public formParent()
         {
-            //client = new FireSharp.FirebaseClient(config);
-            //loadData();
             InitializeComponent();
+            client = new FireSharp.FirebaseClient(config);
             // this.flowLayoutProduct.WrapContents = false;
            
             this.Size = new Size(969,603);
@@ -52,13 +50,14 @@ namespace WindowsFormsApp1
             btnRestaurants.Location = new Point(loactionButtonMenu, btnRestaurants.Location.Y);
             btnFinace.Location = new Point(loactionButtonMenu, btnFinace.Location.Y);
             btnLogout.Location = new Point(loactionButtonMenu, btnLogout.Location.Y);
+            loadData();
 
-            openChildForm(new Home());
-            //this.panelUser.Visible = false;
+            
+            //openChildForm(new LoginRegister(panelUser: this.panelUser));
         }
 
 
-        private async void openChildForm(Form childForm)
+        private void openChildForm(Form childForm)
         {
             if (currentChildForm != null)
             {
@@ -75,11 +74,28 @@ namespace WindowsFormsApp1
 
         }
 
-        private async void loadData()
+        public async void loadData()
         {
             FirebaseResponse response = await client.GetTaskAsync("product/");
-            Dictionary<String,Product> product = response.ResultAs<Dictionary<String, Product>>();
-           // PopularItem(product);
+            mapProduct = response.ResultAs<Dictionary<string, Product>>();
+
+            foreach(String product in mapProduct.Keys)
+            {
+                System.Console.WriteLine("HEHEHEH: "+product);
+            }
+            Form childForm = new Home(mapProduct);
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+
+            this.guna2Panel2.Controls.Add(childForm);
+            this.guna2Panel2.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
        
@@ -88,7 +104,8 @@ namespace WindowsFormsApp1
         {
             btnDashBoard.Checked = true;
             setCheckedButton(btnDashBoard);
-            openChildForm(new Home());
+            openChildForm(home);
+            
         }
 
         private void lbNameStore_Click(object sender, EventArgs e)
@@ -112,26 +129,22 @@ namespace WindowsFormsApp1
             btnFinace.Checked = true;
             setCheckedButton(btnFinace);
             // openChildForm(new DetailProductForm());
-
-           
-
-            Form childForm = new DetailProductForm(this.panelUser);
-            currentChildForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-
-            this.guna2Panel2.Controls.Add(childForm);
-            this.guna2Panel2.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.TopMost = true;
-           // this.FormBorderStyle = FormBorderStyle.None;
-           //this.WindowState = FormWindowState.Maximized;
+            
+
+            Form currentChildForm =new LoginRegister(panelUser);
+            currentChildForm.TopLevel = false;
+            currentChildForm.FormBorderStyle = FormBorderStyle.None;
+
+            this.guna2Panel2.Controls.Add(currentChildForm);
+            this.guna2Panel2.Tag = currentChildForm;
+            currentChildForm.BringToFront();
+            currentChildForm.Show();
+
         }
         
         private void setCheckedButton(Guna.UI2.WinForms.Guna2Button btn)

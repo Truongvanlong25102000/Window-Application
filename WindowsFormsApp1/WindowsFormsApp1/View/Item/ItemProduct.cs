@@ -23,25 +23,36 @@ namespace WindowsFormsApp1.View.Item
             InitializeComponent();
         }
 
-        public ItemProduct(dynamic product)
+        public ItemProduct(Product product)
         {
             InitializeComponent();
             this.product = product;
-            this.Size = new Size(100, 100);
             imageProduct.Size = new Size(100, 85);
-            imageProduct.Load(this.product.image);
-            nameProduct.Text= this.product.name;
-
-            
+            priceProduct.Text = product.price;
+            nameStore.Text = product.nameStore;
+            System.Console.WriteLine("AHHAHAHAHAH" + product.price);
+            System.Console.WriteLine("AHHAHAHAHAH" + product.nameStore);
+            nameProduct.Text= this.product.nameProduct;
+           foreach(String a in product.image.Values)
+            {
+                System.Console.WriteLine("AHHAHAHAHAH" + a);
+                imageProduct.Load(a);
+            }
+           
         }
 
        
 
         private void ItemProduct_Load(object sender, EventArgs e)
         {
-
+            this.Size = new Size(110, 160);
+          //this.AutoSize = true;
+            this.imageProduct.Size = new Size(110, 66);
+            this.imageProduct.Location = new Point(0, 0);
+            this.nameProduct.Location = new Point(0, 93);
+            this.priceProduct.Location = new Point(0, 107);
+            this.nameStore.Location = new Point(0, 120);
         }
-      
 
         private void ViewDetailProduct(object sender, MouseEventArgs e)
         {
@@ -49,6 +60,21 @@ namespace WindowsFormsApp1.View.Item
         }
 
         private void nameStore_Click(object sender, EventArgs e)
+        {
+            this.dataSend(true);
+        }
+
+        private void ItemProduct_Click(object sender, EventArgs e)
+        {
+            this.dataSend(true);
+        }
+
+        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void imageProduct_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Models
 {
-    class Product
+    public class Product
     {
-        public String id { get; set; }
-        public String name { get; set; }
-        public String image { get; set; }
-        public double price { get; set; }
+        public string id { get; set; }
+        public string directory { get; set; }
+        public Dictionary<string,string> image { get; set; }
+        public string nameProduct { get; set; }
+        public string nameStore { get; set; }
+        public string price { get; set; }
+        
 
-        public Product(String id, String name,String image,double price)
+
+        public Product(string directory,Dictionary<string,string> image, string nameProduct,string nameStore, string price)
         {
-            this.id= id;
-            this.name = name;
-            this.id = image;
+            this.directory = directory;
+            this.image = image;
+            this.nameProduct = nameProduct;
+            this.nameStore = nameStore;
             this.price = price;
         }
 

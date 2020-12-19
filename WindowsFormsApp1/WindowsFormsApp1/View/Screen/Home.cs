@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Interface;
+using WindowsFormsApp1.Models;
 using WindowsFormsApp1.View.Item;
 
 namespace WindowsFormsApp1.View.Screen
@@ -15,30 +16,34 @@ namespace WindowsFormsApp1.View.Screen
     public partial class Home : Form
     {
 
-        private int poss = 40;
-       
+        public int poss = 40;
+        Dictionary<string, Product> mapProduct=new Dictionary<string, Product>();
 
-        public Home()
+        public Home(Dictionary<string,Product> mapProduct)
         {
             InitializeComponent();
-            this.Size = new Size(816, 633);//603
-            //this.BackColor = Color.Red;
+            this.mapProduct = mapProduct;
+            Dictionary<String, ItemProduct> mapProduct1 = new Dictionary<string, ItemProduct>();
+
+            foreach (Product product in mapProduct.Values)
+            {
+                ItemProduct item = new ItemProduct(product);
+                item.dataSend += Item_dataSend;
+                mapProduct1.Add(product.nameProduct, item);
+            }
+            PopularItem(mapProduct1);
         }
+
+        
 
         private void Home_Load(object sender, EventArgs e)
         {
             //flowLayoutPanel.Size = new Size(969 - 234, 480);
+            this.Size = new Size(816, 633);//603
             flowLayoutProduct.Size = new Size(880, 490);//830,480
             flowLayoutProduct.AutoScrollPosition = new Point(0, 0);
 
-            Dictionary<String, ItemProduct> mapProduct = new Dictionary<string, ItemProduct>();
-            for (int i = 0; i < 20; i++)
-            {
-                ItemProduct item = new ItemProduct();
-                item.dataSend += Item_dataSend;
-                mapProduct.Add(i.ToString(),item);
-            }
-            PopularItem(mapProduct);
+            
 
         }
 
@@ -68,7 +73,7 @@ namespace WindowsFormsApp1.View.Screen
 
         }
 
-        private void PopularItem(Dictionary<String, ItemProduct> mapProduct)
+        public void PopularItem(Dictionary<String, ItemProduct> mapProduct)
         {
             List<ItemProduct> arrItemProduct = new List<ItemProduct>();
             foreach (ItemProduct item in mapProduct.Values)
@@ -95,6 +100,11 @@ namespace WindowsFormsApp1.View.Screen
         }
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
