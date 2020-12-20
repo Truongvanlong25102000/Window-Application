@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Models
 {
-    class Store
+    public class Store
     {
-        public Dictionary<String, String> directory { get; set; }
-        public String imageStore { get; set; }
-        public String name { get; set; }
-        public String phone { get; set; }
+        public string idStore { get; set; }
+        public Dictionary<string, string> directory { get; set; }
+        public string imageStore { get; set; }
+        public string name { get; set; }
+        public string phone { get; set; }
 
+        public string address { get; set; }
+
+        public string toString() => idStore+ " - "+ imageStore+" - " + name+" "+phone ;
     }
 }

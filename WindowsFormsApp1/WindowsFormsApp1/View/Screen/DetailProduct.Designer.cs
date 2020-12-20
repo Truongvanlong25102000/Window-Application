@@ -38,7 +38,7 @@ namespace WindowsFormsApp1.View.Screen
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.headerHome = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.titleForm = new System.Windows.Forms.Label();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.imageProduct2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -47,7 +47,7 @@ namespace WindowsFormsApp1.View.Screen
             this.imageProduct = new Guna.UI2.WinForms.Guna2PictureBox();
             this.HeaderDetailProduct = new Guna.UI2.WinForms.Guna2Panel();
             this.lbAddressStore = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nameStore = new System.Windows.Forms.Label();
             this.btnAddToCart = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnBuy = new Guna.UI2.WinForms.Guna2GradientButton();
             this.imgStore = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -94,6 +94,7 @@ namespace WindowsFormsApp1.View.Screen
             this.imageProduct1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageProduct1.TabIndex = 18;
             this.imageProduct1.TabStop = false;
+            this.imageProduct1.Click += new System.EventHandler(this.imageProduct1_Click);
             // 
             // imgBack
             // 
@@ -140,7 +141,7 @@ namespace WindowsFormsApp1.View.Screen
             // headerHome
             // 
             this.headerHome.BackColor = System.Drawing.Color.White;
-            this.headerHome.Controls.Add(this.label1);
+            this.headerHome.Controls.Add(this.titleForm);
             this.headerHome.Controls.Add(this.guna2PictureBox4);
             this.headerHome.Controls.Add(this.guna2PictureBox2);
             this.headerHome.Controls.Add(this.imgBack);
@@ -152,18 +153,18 @@ namespace WindowsFormsApp1.View.Screen
             this.headerHome.TabIndex = 6;
             this.headerHome.Paint += new System.Windows.Forms.PaintEventHandler(this.headerHome_Paint);
             // 
-            // label1
+            // titleForm
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.titleForm.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.label1.Location = new System.Drawing.Point(54, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(567, 36);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Categori > FastFood > Cake > Humberger";
+            this.titleForm.AutoSize = true;
+            this.titleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.titleForm.Location = new System.Drawing.Point(54, 56);
+            this.titleForm.Name = "titleForm";
+            this.titleForm.Size = new System.Drawing.Size(319, 36);
+            this.titleForm.TabIndex = 5;
+            this.titleForm.Text = "Categori > FastFood > ";
             // 
             // guna2Elipse2
             // 
@@ -197,6 +198,7 @@ namespace WindowsFormsApp1.View.Screen
             this.imageProduct3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageProduct3.TabIndex = 20;
             this.imageProduct3.TabStop = false;
+            this.imageProduct3.Click += new System.EventHandler(this.imageProduct3_Click);
             // 
             // guna2Elipse4
             // 
@@ -219,7 +221,7 @@ namespace WindowsFormsApp1.View.Screen
             // 
             this.HeaderDetailProduct.BackColor = System.Drawing.Color.White;
             this.HeaderDetailProduct.Controls.Add(this.lbAddressStore);
-            this.HeaderDetailProduct.Controls.Add(this.label2);
+            this.HeaderDetailProduct.Controls.Add(this.nameStore);
             this.HeaderDetailProduct.Controls.Add(this.btnAddToCart);
             this.HeaderDetailProduct.Controls.Add(this.btnBuy);
             this.HeaderDetailProduct.Controls.Add(this.imgStore);
@@ -248,15 +250,15 @@ namespace WindowsFormsApp1.View.Screen
             this.lbAddressStore.Text = "123 Main Street, New York, NY 10030 ";
             this.lbAddressStore.Click += new System.EventHandler(this.lbAddressStore_Click);
             // 
-            // label2
+            // nameStore
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(129, 437);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 20);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Burger Queen";
+            this.nameStore.AutoSize = true;
+            this.nameStore.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameStore.Location = new System.Drawing.Point(129, 437);
+            this.nameStore.Name = "nameStore";
+            this.nameStore.Size = new System.Drawing.Size(121, 20);
+            this.nameStore.TabIndex = 25;
+            this.nameStore.Text = "Burger Queen";
             // 
             // btnAddToCart
             // 
@@ -296,7 +298,7 @@ namespace WindowsFormsApp1.View.Screen
             // imgStore
             // 
             this.imgStore.BackColor = System.Drawing.Color.Transparent;
-            this.imgStore.BorderRadius = 25;
+            this.imgStore.BorderRadius = 15;
             this.imgStore.FillColor = System.Drawing.Color.Transparent;
             this.imgStore.Image = ((System.Drawing.Image)(resources.GetObject("imgStore.Image")));
             this.imgStore.Location = new System.Drawing.Point(57, 422);
@@ -307,6 +309,7 @@ namespace WindowsFormsApp1.View.Screen
             this.imgStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgStore.TabIndex = 22;
             this.imgStore.TabStop = false;
+            this.imgStore.Click += new System.EventHandler(this.imgStore_Click_1);
             // 
             // priceProduct
             // 
@@ -342,7 +345,6 @@ namespace WindowsFormsApp1.View.Screen
             // 
             // flowLayoutParent
             // 
-            this.flowLayoutParent.AutoScroll = true;
             this.flowLayoutParent.Controls.Add(this.HeaderDetailProduct);
             this.flowLayoutParent.Controls.Add(this.panelCenter);
             this.flowLayoutParent.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -359,11 +361,13 @@ namespace WindowsFormsApp1.View.Screen
             this.panelCenter.Controls.Add(this.guna2TextBox1);
             this.panelCenter.Controls.Add(this.guna2PictureBox5);
             this.panelCenter.Controls.Add(this.label3);
-            this.panelCenter.Location = new System.Drawing.Point(3, 519);
+            this.panelCenter.Location = new System.Drawing.Point(0, 516);
+            this.panelCenter.Margin = new System.Windows.Forms.Padding(0);
             this.panelCenter.Name = "panelCenter";
             this.panelCenter.ShadowDecoration.Parent = this.panelCenter;
             this.panelCenter.Size = new System.Drawing.Size(1172, 380);
             this.panelCenter.TabIndex = 1;
+            this.panelCenter.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCenter_Paint);
             // 
             // guna2TextBox1
             // 
@@ -418,7 +422,6 @@ namespace WindowsFormsApp1.View.Screen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1236, 1106);
             this.Controls.Add(this.flowLayoutParent);
@@ -459,11 +462,11 @@ namespace WindowsFormsApp1.View.Screen
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label titleForm;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutParent;
         private Guna.UI2.WinForms.Guna2Panel HeaderDetailProduct;
         private System.Windows.Forms.Label lbAddressStore;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label nameStore;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddToCart;
         private Guna.UI2.WinForms.Guna2GradientButton btnBuy;
         private Guna.UI2.WinForms.Guna2PictureBox imgStore;

@@ -26,19 +26,12 @@ namespace WindowsFormsApp1
         private Point startPoint = new Point(0, 0);
         public Dictionary<string, Product> mapProduct;
         public Home home;
-        IFirebaseConfig config = new FirebaseConfig
-        {
-            AuthSecret = "ODk7Qlr8hR80rttKSI41lfaYR7ywCvCBo9XEUfIH",
-            BasePath = "https://foodappdesktop-default-rtdb.firebaseio.com/",
-        };
-
-        IFirebaseClient client;
         private Form currentChildForm;
 
         public formParent()
         {
             InitializeComponent();
-            client = new FireSharp.FirebaseClient(config);
+            Config.Config.client = new FireSharp.FirebaseClient(Config.Config.config);
             // this.flowLayoutProduct.WrapContents = false;
            
             this.Size = new Size(969,603);
@@ -72,18 +65,30 @@ namespace WindowsFormsApp1
             this.guna2Panel2.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        public async Task updateValue()
+        {
+            Store store;
+
+            foreach (Product product in mapProduct.Values)
+            {
+
+                Config.Config.response = await Config.Config.client.GetTaskAsync("store/" + product.idStore);
+                store = Config.Config.response.ResultAs<Store>();
+                store.idStore = product.idStore;
+                product.directory = store.directory;
+                product.address = store.address;
+                product.imageStore = store.imageStore;
+                store.name = product.nameStore;
+                product.phone = store.phone;
+                System.Console.WriteLine("HEHEHEH: " + product.comment.Count);
+            }
 
         }
 
-        public async void loadData()
+        public async Task loadFormHome()
         {
-            FirebaseResponse response = await client.GetTaskAsync("product/");
-            mapProduct = response.ResultAs<Dictionary<string, Product>>();
-
-            foreach(Product product in mapProduct.Values)
-            {
-                System.Console.WriteLine("HEHEHEH: "+product.directoryId);
-            }
             home = new Home(mapProduct);
             Form childForm = new Home(mapProduct);
             if (currentChildForm != null)
@@ -100,7 +105,16 @@ namespace WindowsFormsApp1
             childForm.Show();
         }
 
-       
+
+        public async void loadData()
+        {
+            Config.Config.response = await Config.Config.client.GetTaskAsync("product/");
+            mapProduct = Config.Config.response.ResultAs<Dictionary<string, Product>>();
+
+            await updateValue();
+            await loadFormHome();
+        }
+
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {

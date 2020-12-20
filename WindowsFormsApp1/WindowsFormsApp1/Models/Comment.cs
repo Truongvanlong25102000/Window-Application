@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Models
 {
-    class Comment
+    public class Comment
     {
-        public String avatar { get; set; }
-        public String content { get; set; }
+        public string avatarCustomer { get; set; }
+        public string content { get; set; }
+        public string nameCustomer { get; set; }
+        public string time { get; set; }
 
         public Comment()
         {
 
         }
 
+        public string toString() => avatarCustomer+"\t"+content+"\t"+nameCustomer+"\t"+time;
     }
 }

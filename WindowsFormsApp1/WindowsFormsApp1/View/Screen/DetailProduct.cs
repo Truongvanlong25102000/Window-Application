@@ -31,7 +31,10 @@ namespace WindowsFormsApp1.View.Screen
 
         async private void loadData()
         {
-            foreach(string i in product.image.Values)
+            this.imageProduct.Image = Properties.Resources.loadingImage;
+            this.imgStore.Image= Properties.Resources.loadingImage;
+            this.titleForm.Text = titleForm.Text + product.nameProduct;
+            foreach (string i in product.image.Values)
             {
                 listImage.Add(i);
             }
@@ -46,7 +49,9 @@ namespace WindowsFormsApp1.View.Screen
             this.nameProduct.Text = product.nameProduct;
             this.priceProduct.Text = product.price;
             this.description.Text = product.description;
-
+            this.imgStore.LoadAsync(product.imageStore);
+            this.nameStore.Text = product.nameStore;
+            this.lbAddressStore.Text = product.address;
         }
 
         public DetailProductForm(Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser)
@@ -58,6 +63,7 @@ namespace WindowsFormsApp1.View.Screen
 
         private void DetailProduct_LoadAsync(object sender, EventArgs e)
         {
+           
             this.Size = new Size(880,603);//880,490
             this.HeaderDetailProduct.Size = new Size(850, 340);//880,603//880 310
             this.flowLayoutParent.Size = new Size(850, 603);
@@ -67,17 +73,22 @@ namespace WindowsFormsApp1.View.Screen
 
         private void addComment()
         {
-            this.panelCenter.Size = new Size(850, 150);
-            flowLayoutParent.AutoScrollPosition = new Point(0, 0);
+            this.panelCenter.Size = new Size(500, 150);
+          //  flowLayoutParent.AutoScrollPosition = new Point(0, 0);
             int top = 490;
             ItemComment item;
-            for (int i = 0; i < 2; i++)
+            int count = 0;
+            foreach(String idComment in product.comment.Values)
             {
-                item = new ItemComment();
+                count++;
+                if (count == product.comment.Count)
+                    break;
+                item = new ItemComment(idComment);
                 flowLayoutParent.Controls.Add(item);
                 item.Top = top;
                 top = (item.Top + item.Height + 40);
             }
+            
             flowLayoutParent.AutoScroll = true;
         }
 
@@ -159,7 +170,42 @@ namespace WindowsFormsApp1.View.Screen
 
         private void imageProduct2_Click(object sender, EventArgs e)
         {
+            if (listImage.Count>=2)
+            {
+                this.imageProduct.LoadAsync(listImage[1]);
+            }
+            else
+            {
+                this.imageProduct.Image = Properties.Resources.imagePlacehodel;
+            }
+        }
 
+        private void imageProduct3_Click(object sender, EventArgs e)
+        {
+            if (listImage.Count >= 2)
+            {
+                this.imageProduct.LoadAsync(listImage[1]);
+            }
+            else
+            {
+                this.imageProduct.Image = Properties.Resources.imagePlacehodel;
+            }
+        }
+
+        private void imageProduct1_Click(object sender, EventArgs e)
+        {
+            this.imageProduct.Image = Properties.Resources.loadingImage;
+            this.imageProduct.LoadAsync(listImage[0]);
+        }
+
+        private void imgStore_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelCenter_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }

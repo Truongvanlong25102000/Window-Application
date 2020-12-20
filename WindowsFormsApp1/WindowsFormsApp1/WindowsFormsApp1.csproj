@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Utils\Config.cs" />
     <Compile Include="Interface\ViewProduct.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Product.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\Item\ItemAddProduct.resx">
       <DependentUpon>ItemAddProduct.cs</DependentUpon>
@@ -156,6 +158,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseImgProduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagePlacehodel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loadingImage.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

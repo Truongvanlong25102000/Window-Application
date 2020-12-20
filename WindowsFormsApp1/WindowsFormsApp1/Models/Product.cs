@@ -6,18 +6,16 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Models
 {
-    public class Product
+    public class Product: Store
     {
+        public Dictionary<string,string> comment { get;set ;}
         public string description { get; set; }
         public string directoryId { get; set; }
-        public string idStore { get; set; }
         public Dictionary<string,string> image { get; set; }
         public string nameProduct { get; set; }
         public string nameStore { get; set; }
         public string price { get; set; }
         
-
-
         public Product(string directory,Dictionary<string,string> image, string nameProduct,string nameStore, string price)
         {
             this.directoryId = directory;
@@ -32,5 +30,9 @@ namespace WindowsFormsApp1.Models
 
         }
 
+        async public void getInforStore()
+        {
+            
+        }
     }
 }

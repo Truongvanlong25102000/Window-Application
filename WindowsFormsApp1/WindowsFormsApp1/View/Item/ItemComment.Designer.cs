@@ -43,7 +43,7 @@ namespace WindowsFormsApp1.View.Item
             this.avatar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.avatar.BorderRadius = 10;
-            this.avatar.Image = ((System.Drawing.Image)(resources.GetObject("avatar.Image")));
+            this.avatar.Image = global::WindowsFormsApp1.Properties.Resources.loadingImage;
             this.avatar.Location = new System.Drawing.Point(57, 12);
             this.avatar.Name = "avatar";
             this.avatar.ShadowDecoration.Parent = this.avatar;
@@ -98,8 +98,10 @@ namespace WindowsFormsApp1.View.Item
             this.Controls.Add(this.timeComment);
             this.Controls.Add(this.lbContent);
             this.Controls.Add(this.avatar);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ItemComment";
             this.Size = new System.Drawing.Size(871, 70);
+            this.Load += new System.EventHandler(this.ItemComment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
