@@ -11,9 +11,11 @@ using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.View.Screen
 {
+    public delegate void DataSendToFomParent(bool isLogin);
     public partial class LoginRegister : Form
     {
         Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser;
+        public event DataSendHandler isLogin;
         public LoginRegister(Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser)
         {
             InitializeComponent();
@@ -44,17 +46,24 @@ namespace WindowsFormsApp1.View.Screen
                             Config.Config.user = user;
                             Config.Config.userName = edtUserName.Text.Trim();
                             Console.WriteLine("USERRRR: "+Config.Config.user.avatar);
+                            this.lbError.Visible = false;
+                            formParent.panelUsers.Visible = true;
+                            isLogin(true);
+                            this.Close();
                         }
                         else
                         {
                             Console.WriteLine("NNNNNNNNNNNNNNNNNNNN");
-                            MessageBox.Show("Tai khoan mat khau khong dung");
+                            //MessageBox.Show("Tai khoan mat khau khong dung");
+                            this.lbError.Visible = true;
+                            
                         }
                     }
                     else
                     {
                         Console.WriteLine("NNNNNNNNNNNNNNNNNNNN");
-                        MessageBox.Show("Tai khoan mat khau khong dung");
+                        this.lbError.Visible = true;
+                        //MessageBox.Show("Tai khoan mat khau khong dung");
                     }
                 }
                 catch(Exception ex)
@@ -105,7 +114,8 @@ namespace WindowsFormsApp1.View.Screen
             this.lbOr.Location = new Point(761, 348);
             this.lbRegister.Location = new Point(780, 348);
             edtPassWord.UseSystemPasswordChar = true;
-
+            this.lbError.Location = new Point(650,440);
+            this.lbError.Visible = false;
         }
 
         private void lbForgetPassword_Click(object sender, EventArgs e)

@@ -17,22 +17,25 @@ namespace WindowsFormsApp1.View.Screen
     {
 
         public int poss = 40;
-        Dictionary<string, Product> mapProduct=new Dictionary<string, Product>();
-
-        public Home(Dictionary<string,Product> mapProduct)
+        public static Guna.UI2.WinForms.Guna2PictureBox avatarTopbar;
+        //public static 
+        public Home()
         {
             InitializeComponent();
             CheckIsLogin();
-            this.mapProduct = mapProduct;
+            avatarTopbar = this.avatarTopBar;
             Dictionary<string, ItemProduct> mapProduct1 = new Dictionary<string, ItemProduct>();
 
-            foreach (Product product in mapProduct.Values)
+            for(int i = 0; i < formParent.mapProduct.Count; i++)
             {
-                ItemProduct item = new ItemProduct(product);
+                formParent.mapProduct.Values.ElementAt(i).idProduct = formParent.mapProduct.Keys.ElementAt(i);
+                ItemProduct item = new ItemProduct(formParent.mapProduct.Values.ElementAt(i));
                 item.dataSend += Item_dataSend;
-                
-                mapProduct1.Add(product.nameProduct, item);
+
+                mapProduct1.Add(formParent.mapProduct.Values.ElementAt(i).nameProduct, item);
+               // Console.WriteLine("ABCABCABCABC: KEY : " + mapProduct.Values.ElementAt(i).idProduct);
             }
+           
             PopularItem(mapProduct1);
         }
 
@@ -58,20 +61,35 @@ namespace WindowsFormsApp1.View.Screen
             childForm.Show();
         }
 
-        private void ChildForm_addCmt(bool isClick)
+        private void ChildForm_addCmt(bool isLogin)
         {
-            this.Size = new Size(969, 603);
-            formParent.panelUsers.Visible = false;
-            this.TopMost = true;
-            Form currentChildForm = new LoginRegister();
-            currentChildForm.TopLevel = false;
-            currentChildForm.FormBorderStyle = FormBorderStyle.None;
+            if (isLogin)
+            {
 
-            this.Controls.Add(currentChildForm);
-            this.Tag = currentChildForm;
-            currentChildForm.BringToFront();
-            currentChildForm.Show();
+            }
+            else
+            {
+                this.Size = new Size(969, 603);
+                formParent.panelUsers.Visible = false;
+                this.TopMost = true;
+                LoginRegister currentChildForm = new LoginRegister();
+                currentChildForm.isLogin += CurrentChildForm_isLogin;
+                currentChildForm.TopLevel = false;
+                currentChildForm.FormBorderStyle = FormBorderStyle.None;
 
+                this.Controls.Add(currentChildForm);
+                this.Tag = currentChildForm;
+                currentChildForm.BringToFront();
+                currentChildForm.Show();
+            }
+        }
+
+        private void CurrentChildForm_isLogin(bool isClick)
+        {
+            Home.avatarTopbar.Image = Properties.Resources.loadingImage;
+            Home.avatarTopbar.LoadAsync(Config.Config.user.avatar);
+            formParent.imgAvatar.Image= Properties.Resources.loadingImage;
+            formParent.imgAvatar.LoadAsync(Config.Config.user.avatar);
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -80,9 +98,6 @@ namespace WindowsFormsApp1.View.Screen
             this.Size = new Size(816, 633);//603
             flowLayoutProduct.Size = new Size(880, 490);//830,480
             flowLayoutProduct.AutoScrollPosition = new Point(0, 0);
-
-            
-
         }
 
         private void headerHome_Paint(object sender, PaintEventArgs e)

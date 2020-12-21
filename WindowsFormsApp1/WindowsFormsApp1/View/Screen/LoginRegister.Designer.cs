@@ -43,6 +43,7 @@ namespace WindowsFormsApp1.View.Screen
             this.btnExitApp = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbOr = new System.Windows.Forms.Label();
             this.lbRegister = new System.Windows.Forms.Label();
+            this.lbError = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.img)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExitApp)).BeginInit();
@@ -228,6 +229,17 @@ namespace WindowsFormsApp1.View.Screen
             this.lbRegister.Text = "Register";
             this.lbRegister.Click += new System.EventHandler(this.lbRegister_Click);
             // 
+            // lbError
+            // 
+            this.lbError.AutoSize = true;
+            this.lbError.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbError.ForeColor = System.Drawing.Color.Red;
+            this.lbError.Location = new System.Drawing.Point(686, 484);
+            this.lbError.Name = "lbError";
+            this.lbError.Size = new System.Drawing.Size(266, 22);
+            this.lbError.TabIndex = 11;
+            this.lbError.Text = "Account or password is incorrect";
+            // 
             // LoginRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -235,6 +247,7 @@ namespace WindowsFormsApp1.View.Screen
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1134, 704);
+            this.Controls.Add(this.lbError);
             this.Controls.Add(this.lbRegister);
             this.Controls.Add(this.lbOr);
             this.Controls.Add(this.btnExitApp);
@@ -272,5 +285,6 @@ namespace WindowsFormsApp1.View.Screen
         private Guna.UI2.WinForms.Guna2PictureBox btnExitApp;
         private System.Windows.Forms.Label lbOr;
         private System.Windows.Forms.Label lbRegister;
+        private System.Windows.Forms.Label lbError;
     }
 }

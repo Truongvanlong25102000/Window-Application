@@ -23,6 +23,5 @@ namespace WindowsFormsApp1.Config
         public static FirebaseResponse response;
         public static string userName="";
         public static User user;
-
     }
 }

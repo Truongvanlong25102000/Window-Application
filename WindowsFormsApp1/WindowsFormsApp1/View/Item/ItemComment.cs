@@ -22,9 +22,9 @@ namespace WindowsFormsApp1.View.Item
             this.avatar.BorderRadius = 15;
         }
 
-        async private void loadData(string idComment)
+        private async Task loadData(string idComment)
         {
-            Comment comment = new Comment();
+            Comment comment;
             try
             {
                 Config.Config.response = await Config.Config.client.GetTaskAsync("comment/" +idComment);

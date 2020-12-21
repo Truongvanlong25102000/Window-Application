@@ -23,3 +23,4 @@ C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Screen.Home.resources
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Item.ItemComment.resources
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Screen.LoginRegister.resources
+C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Screen.ErrorDialog.resources

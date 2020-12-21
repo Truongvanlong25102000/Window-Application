@@ -12,12 +12,13 @@ using WindowsFormsApp1.View.Item;
 
 namespace WindowsFormsApp1.View.Screen
 {
-    public delegate void DataSendHandler(bool isClick);
+    public delegate void DataSendHandler(bool isLogin);
     public partial class DetailProductForm : Form
     {
         public event DataSendHandler addCmt;
-        List<String> listImage=new List<string>();
+        List<string> listImage=new List<string>();
         Product product;
+        int top = 490;
         public DetailProductForm()
         {
             InitializeComponent();
@@ -76,7 +77,7 @@ namespace WindowsFormsApp1.View.Screen
         {
             this.panelCenter.Size = new Size(500, 150);
           //  flowLayoutParent.AutoScrollPosition = new Point(0, 0);
-            int top = 490;
+           
             ItemComment item;
             int count = 0;
             foreach(String idComment in product.comment.Values)
@@ -96,7 +97,10 @@ namespace WindowsFormsApp1.View.Screen
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             //formParent.panelUsers.Visible = true;
+            //this.edtComment.Clear();
             this.Close();
+           
+            
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -214,19 +218,57 @@ namespace WindowsFormsApp1.View.Screen
 
         }
 
-        private void addCommentToSerer(object sender, KeyEventArgs e)
+        private async void addCommentToSerer(object sender, KeyEventArgs e)
         {
             if ((e.KeyCode == Keys.Enter)&&edtComment.Text.Length>0)
             {
                 if (Config.Config.userName.Length > 0)
                 {
+                    DateTime d = DateTime.UtcNow;
+                    int year = d.Year;
+                    int month = d.Month;
+                    int day = d.Day;
+                    string key1 = ((d.Hour * 3600000) + (d.Minute * 60000) + (d.Second * 1000) + d.Millisecond).ToString();
+                    string time = month.ToString() + "/" + day.ToString() + "/"+year.ToString();
+                    Console.WriteLine("LLLLLLLLL:{0}, KEYYYYYY:{1} ", time,key1);
+                    Comment cmt = new Comment()
+                    {
+                        avatarCustomer = Config.Config.user.avatar,
+                        content = edtComment.Text.Trim(),
+                        nameCustomer = Config.Config.user.name,
+                        time = time,
+                    };
+                    //Console.WriteLine("ALAOALOALO: ");
+                    var set = Config.Config.client.Set(@"comment/"+key1,cmt);
+                    var set1= Config.Config.client.Set(@"product/"+product.idProduct+"/comment/" + key1+d.Millisecond.ToString(), key1);
 
+                    this.edtComment.Clear();
+                    // this.imgBack.Focus();
+                    
+                    ItemComment item = new ItemComment(key1);
+                    flowLayoutParent.Controls.Add(item);
+                    item.Top = top;
+                    top = (item.Top + item.Height + 40);
+                    this.flowLayoutParent.ScrollControlIntoView(item);
+
+                    Config.Config.response = await Config.Config.client.GetTaskAsync("product/");
+                    formParent.mapProduct = Config.Config.response.ResultAs<Dictionary<string, Product>>();
                 }
                 else
                 {
-                    this.addCmt(true);
+                    this.addCmt(false);
                 }
             }
+        }
+
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void edtComment_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

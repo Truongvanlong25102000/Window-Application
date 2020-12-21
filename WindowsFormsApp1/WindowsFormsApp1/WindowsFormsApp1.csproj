@@ -89,6 +89,12 @@
     <Compile Include="View\Item\ItemProduct.Designer.cs">
       <DependentUpon>ItemProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Screen\ErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Screen\ErrorDialog.Designer.cs">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Screen\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Screen\DetailProduct.resx">
       <DependentUpon>DetailProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Screen\ErrorDialog.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Screen\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

@@ -151,6 +151,7 @@ namespace WindowsFormsApp1.View.Screen
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.Click += new System.EventHandler(this.guna2PictureBox2_Click);
             // 
             // imgBack
             // 
@@ -397,6 +398,7 @@ namespace WindowsFormsApp1.View.Screen
             this.edtComment.Size = new System.Drawing.Size(777, 46);
             this.edtComment.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.edtComment.TabIndex = 34;
+            this.edtComment.TextChanged += new System.EventHandler(this.edtComment_TextChanged);
             this.edtComment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addCommentToSerer);
             // 
             // guna2PictureBox5

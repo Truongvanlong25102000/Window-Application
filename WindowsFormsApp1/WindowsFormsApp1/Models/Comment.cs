@@ -8,6 +8,7 @@ namespace WindowsFormsApp1.Models
 {
     public class Comment
     {
+        public string idComment { get; set; }
         public string avatarCustomer { get; set; }
         public string content { get; set; }
         public string nameCustomer { get; set; }

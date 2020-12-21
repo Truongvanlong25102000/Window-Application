@@ -22,17 +22,18 @@ namespace WindowsFormsApp1
     {
         
         public static Guna.UI2.WinForms.Guna2CustomGradientPanel panelUsers;
+        public static Guna.UI2.WinForms.Guna2PictureBox imgAvatar;
         private bool drag=false;
         private Point startPoint = new Point(0, 0);
-        public Dictionary<string, Product> mapProduct;
-        public Home home;
+        public static Dictionary<string, Product> mapProduct;
+        public static Home home;
         private Form currentChildForm;
 
         public formParent()
         {
             InitializeComponent();
             panelUsers = this.panelUser;
-            // this.flowLayoutProduct.WrapContents = false;
+            imgAvatar = this.avatar;
             this.Size = new Size(969,603);
             int locationn = (panelUser.Size.Width - lbNameStore.Size.Width) / 2;
             lbNameStore.Location = new Point(locationn, lbNameStore.Location.Y);
@@ -46,13 +47,18 @@ namespace WindowsFormsApp1
             loadData();
             // user pannel
             checkIsLogin();
+
         }
 
-        private void checkIsLogin()
+        async public void checkIsLogin()
         {
-            if (Config.Config.userName.Length>0)
+            if ((Config.Config.userName.Length > 0) && (Config.Config.user != null))
             {
-                
+                this.avatar.Image = Properties.Resources.loadingImage;
+                this.avatar.LoadAsync(Config.Config.user.avatar);
+                Home.avatarTopbar.Image = Properties.Resources.loadingImage;
+                Home.avatarTopbar.LoadAsync(Config.Config.user.avatar);
+                Console.WriteLine("HEHEHEHLLLLLOOO");
             }
         }
 
@@ -92,10 +98,10 @@ namespace WindowsFormsApp1
 
         }
 
-        public async Task loadFormHome()
+        public async void loadFormHome()
         {
-            home = new Home(mapProduct);
-            Form childForm = new Home(mapProduct);
+            home = new Home();
+            Form childForm = new Home();
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
@@ -117,16 +123,23 @@ namespace WindowsFormsApp1
             mapProduct = Config.Config.response.ResultAs<Dictionary<string, Product>>();
 
             await updateValue();
-            await loadFormHome();
+            loadFormHome();
         }
 
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private async void guna2Button1_Click(object sender, EventArgs e)
         {
             btnDashBoard.Checked = true;
             setCheckedButton(btnDashBoard);
-            openChildForm(home);
-            
+           // openChildForm(home);
+            Home childForm = home;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+
+            this.guna2Panel2.Controls.Add(childForm);
+            this.guna2Panel2.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
         private void lbNameStore_Click(object sender, EventArgs e)
@@ -137,25 +150,36 @@ namespace WindowsFormsApp1
         {
             btnOrders.Checked = true;
             setCheckedButton(btnOrders);
+            openChildForm(new LoginRegister());
         }
 
         private void btnRestaurants_Click(object sender, EventArgs e)
         {
             btnRestaurants.Checked = true;
             setCheckedButton(btnRestaurants);
+            openChildForm(new LoginRegister());
         }
 
         private void btnFinace_Click(object sender, EventArgs e)
         {
             btnFinace.Checked = true;
             setCheckedButton(btnFinace);
-            // openChildForm(new DetailProductForm());
+            openChildForm(new LoginRegister());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            btnDashBoard.Checked = true;
+            btnFinace.Checked = false;
+            btnOrders.Checked = false;
+            btnRestaurants.Checked = false;
             this.TopMost = true;
-            Form currentChildForm =new LoginRegister(panelUser);
+            if (this.currentChildForm != null)
+            {
+                this.currentChildForm.Close();
+            }
+            LoginRegister currentChildForm =new LoginRegister(panelUser);
+            currentChildForm.isLogin += CurrentChildForm_isLogin;
             currentChildForm.TopLevel = false;
             currentChildForm.FormBorderStyle = FormBorderStyle.None;
 
@@ -163,9 +187,13 @@ namespace WindowsFormsApp1
             this.guna2Panel2.Tag = currentChildForm;
             currentChildForm.BringToFront();
             currentChildForm.Show();
-
         }
-        
+
+        private void CurrentChildForm_isLogin(bool isClick)
+        {
+            checkIsLogin();
+        }
+
         private void setCheckedButton(Guna.UI2.WinForms.Guna2Button btn)
         {
             List<dynamic> listButton = new List<dynamic>() { btnDashBoard,btnOrders,btnRestaurants,btnFinace};
