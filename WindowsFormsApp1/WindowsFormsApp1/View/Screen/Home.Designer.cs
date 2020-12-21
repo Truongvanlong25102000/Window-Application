@@ -31,11 +31,11 @@ namespace WindowsFormsApp1.View.Screen
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.headerHome = new Guna.UI2.WinForms.Guna2Panel();
+            this.flowLayoutProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.flowLayoutProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.headerHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -57,11 +57,21 @@ namespace WindowsFormsApp1.View.Screen
             this.headerHome.TabIndex = 3;
             this.headerHome.Paint += new System.Windows.Forms.PaintEventHandler(this.headerHome_Paint);
             // 
+            // flowLayoutProduct
+            // 
+            this.flowLayoutProduct.BackColor = System.Drawing.Color.White;
+            this.flowLayoutProduct.Location = new System.Drawing.Point(0, 160);
+            this.flowLayoutProduct.Name = "flowLayoutProduct";
+            this.flowLayoutProduct.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.flowLayoutProduct.Size = new System.Drawing.Size(1198, 712);
+            this.flowLayoutProduct.TabIndex = 4;
+            this.flowLayoutProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutProduct_Paint);
+            // 
             // guna2PictureBox4
             // 
             this.guna2PictureBox4.AutoRoundedCorners = true;
             this.guna2PictureBox4.BorderRadius = 24;
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.ic_user_green;
             this.guna2PictureBox4.Location = new System.Drawing.Point(1080, 56);
             this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(0);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
@@ -74,7 +84,7 @@ namespace WindowsFormsApp1.View.Screen
             // 
             // guna2PictureBox3
             // 
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.ic_notification;
             this.guna2PictureBox3.Location = new System.Drawing.Point(974, 56);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.ShadowDecoration.Parent = this.guna2PictureBox3;
@@ -86,7 +96,7 @@ namespace WindowsFormsApp1.View.Screen
             // 
             // guna2PictureBox2
             // 
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.ic_cart;
             this.guna2PictureBox2.Location = new System.Drawing.Point(865, 56);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
@@ -129,16 +139,6 @@ namespace WindowsFormsApp1.View.Screen
             this.guna2TextBox2.TextOffset = new System.Drawing.Point(10, 0);
             this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
-            // flowLayoutProduct
-            // 
-            this.flowLayoutProduct.BackColor = System.Drawing.Color.White;
-            this.flowLayoutProduct.Location = new System.Drawing.Point(0, 160);
-            this.flowLayoutProduct.Name = "flowLayoutProduct";
-            this.flowLayoutProduct.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.flowLayoutProduct.Size = new System.Drawing.Size(1198, 712);
-            this.flowLayoutProduct.TabIndex = 4;
-            this.flowLayoutProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutProduct_Paint);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -161,10 +161,10 @@ namespace WindowsFormsApp1.View.Screen
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel headerHome;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutProduct;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
     }
 }

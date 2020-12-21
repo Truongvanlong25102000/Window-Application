@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp1.Models;
+using WindowsFormsApp1.View.Screen;
 
 namespace WindowsFormsApp1.Config
 {
@@ -17,8 +19,10 @@ namespace WindowsFormsApp1.Config
             BasePath = "https://foodappdesktop-default-rtdb.firebaseio.com/",
         };
 
-        public static IFirebaseClient client;
+        public static IFirebaseClient client = new FireSharp.FirebaseClient(config);
         public static FirebaseResponse response;
+        public static string userName="";
+        public static User user;
 
     }
 }

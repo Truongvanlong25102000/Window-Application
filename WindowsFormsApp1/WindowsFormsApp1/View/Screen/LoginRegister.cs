@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.View.Screen
 {
@@ -20,10 +21,65 @@ namespace WindowsFormsApp1.View.Screen
             panelUser.Visible = false;
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        public LoginRegister()
         {
-            panelUser.Visible = true;
-            this.Close();
+            InitializeComponent();
+        }
+
+        async public void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+            if (edtPassWord.Text.Length > 0 && edtUserName.Text.Length > 0)
+            {
+                try
+                {
+                    Config.Config.response = await Config.Config.client.GetTaskAsync("user/" + edtUserName.Text + "/");
+                    
+                    if (!Config.Config.response.Body.ToString().Equals("null"))
+                    {
+                        User user = Config.Config.response.ResultAs<User>();
+                        if (user.pass.Equals(edtPassWord.Text.Trim()))
+                        {
+                            Console.WriteLine("USUSUSUSUSUSUSUSUUS" + Config.Config.response.Body.ToString());
+                            Config.Config.user = user;
+                            Config.Config.userName = edtUserName.Text.Trim();
+                            Console.WriteLine("USERRRR: "+Config.Config.user.avatar);
+                        }
+                        else
+                        {
+                            Console.WriteLine("NNNNNNNNNNNNNNNNNNNN");
+                            MessageBox.Show("Tai khoan mat khau khong dung");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("NNNNNNNNNNNNNNNNNNNN");
+                        MessageBox.Show("Tai khoan mat khau khong dung");
+                    }
+                }
+                catch(Exception ex)
+                {
+                    System.Console.WriteLine(ex.StackTrace.ToString());
+                }
+                
+
+                
+
+
+            }
+            else
+            {
+                if (edtUserName.Text.Equals(""))
+                {
+                    edtUserName.PlaceholderForeColor = Color.Red;
+                }
+                if (edtPassWord.Text.Equals(""))
+                {
+                    edtPassWord.PlaceholderForeColor = Color.Red;
+                }
+            }
+           // panelUser.Visible = true;
+            //this.Close();
         }
 
         private void formLoginRegister_Load(object sender, EventArgs e)
@@ -59,7 +115,7 @@ namespace WindowsFormsApp1.View.Screen
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            this.panelUser.Visible = true;
+            formParent.panelUsers.Visible = true;
             this.Close();
         }
 

@@ -22,6 +22,7 @@ namespace WindowsFormsApp1.View.Screen
         public Home(Dictionary<string,Product> mapProduct)
         {
             InitializeComponent();
+            CheckIsLogin();
             this.mapProduct = mapProduct;
             Dictionary<string, ItemProduct> mapProduct1 = new Dictionary<string, ItemProduct>();
 
@@ -29,14 +30,24 @@ namespace WindowsFormsApp1.View.Screen
             {
                 ItemProduct item = new ItemProduct(product);
                 item.dataSend += Item_dataSend;
+                
                 mapProduct1.Add(product.nameProduct, item);
             }
             PopularItem(mapProduct1);
         }
 
+        private void CheckIsLogin()
+        {
+            if (Config.Config.userName.Length>0)
+            {
+
+            }
+        }
+
         private void Item_dataSend(bool isClick, Product product)
         {
-            Form childForm = new DetailProductForm(product);
+            DetailProductForm childForm = new DetailProductForm(product);
+            childForm.addCmt += ChildForm_addCmt;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
 
@@ -45,6 +56,22 @@ namespace WindowsFormsApp1.View.Screen
             this.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void ChildForm_addCmt(bool isClick)
+        {
+            this.Size = new Size(969, 603);
+            formParent.panelUsers.Visible = false;
+            this.TopMost = true;
+            Form currentChildForm = new LoginRegister();
+            currentChildForm.TopLevel = false;
+            currentChildForm.FormBorderStyle = FormBorderStyle.None;
+
+            this.Controls.Add(currentChildForm);
+            this.Tag = currentChildForm;
+            currentChildForm.BringToFront();
+            currentChildForm.Show();
+
         }
 
         private void Home_Load(object sender, EventArgs e)

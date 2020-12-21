@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\User.cs" />
     <Compile Include="Utils\Config.cs" />
     <Compile Include="Interface\ViewProduct.cs" />
     <Compile Include="Models\Comment.cs" />
@@ -170,6 +171,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loadingImage.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_user_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

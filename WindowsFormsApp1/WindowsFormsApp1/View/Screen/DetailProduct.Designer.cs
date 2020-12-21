@@ -34,11 +34,11 @@ namespace WindowsFormsApp1.View.Screen
             this.connerRadiusParent = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.imageProduct1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.imgBack = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.headerHome = new Guna.UI2.WinForms.Guna2Panel();
             this.titleForm = new System.Windows.Forms.Label();
+            this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.imgBack = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.imageProduct2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -56,14 +56,14 @@ namespace WindowsFormsApp1.View.Screen
             this.nameProduct = new System.Windows.Forms.Label();
             this.flowLayoutParent = new System.Windows.Forms.FlowLayoutPanel();
             this.panelCenter = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.edtComment = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             this.headerHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct)).BeginInit();
@@ -96,48 +96,6 @@ namespace WindowsFormsApp1.View.Screen
             this.imageProduct1.TabStop = false;
             this.imageProduct1.Click += new System.EventHandler(this.imageProduct1_Click);
             // 
-            // imgBack
-            // 
-            this.imgBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.imgBack.Image = ((System.Drawing.Image)(resources.GetObject("imgBack.Image")));
-            this.imgBack.Location = new System.Drawing.Point(1125, 56);
-            this.imgBack.Name = "imgBack";
-            this.imgBack.ShadowDecoration.Parent = this.imgBack;
-            this.imgBack.Size = new System.Drawing.Size(50, 45);
-            this.imgBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgBack.TabIndex = 0;
-            this.imgBack.TabStop = false;
-            this.imgBack.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.Location = new System.Drawing.Point(1038, 56);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(50, 45);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox2.TabIndex = 2;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox4
-            // 
-            this.guna2PictureBox4.AutoRoundedCorners = true;
-            this.guna2PictureBox4.BorderRadius = 24;
-            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
-            this.guna2PictureBox4.Location = new System.Drawing.Point(1318, 56);
-            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2PictureBox4.Name = "guna2PictureBox4";
-            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
-            this.guna2PictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox4.TabIndex = 4;
-            this.guna2PictureBox4.TabStop = false;
-            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
-            // 
             // headerHome
             // 
             this.headerHome.BackColor = System.Drawing.Color.White;
@@ -165,6 +123,48 @@ namespace WindowsFormsApp1.View.Screen
             this.titleForm.Size = new System.Drawing.Size(319, 36);
             this.titleForm.TabIndex = 5;
             this.titleForm.Text = "Categori > FastFood > ";
+            // 
+            // guna2PictureBox4
+            // 
+            this.guna2PictureBox4.AutoRoundedCorners = true;
+            this.guna2PictureBox4.BorderRadius = 24;
+            this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
+            this.guna2PictureBox4.Location = new System.Drawing.Point(1318, 56);
+            this.guna2PictureBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2PictureBox4.Name = "guna2PictureBox4";
+            this.guna2PictureBox4.ShadowDecoration.Parent = this.guna2PictureBox4;
+            this.guna2PictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox4.TabIndex = 4;
+            this.guna2PictureBox4.TabStop = false;
+            this.guna2PictureBox4.Click += new System.EventHandler(this.guna2PictureBox4_Click);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2PictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.ic_cart;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(1038, 56);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(50, 45);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 2;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // imgBack
+            // 
+            this.imgBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.imgBack.Image = ((System.Drawing.Image)(resources.GetObject("imgBack.Image")));
+            this.imgBack.Location = new System.Drawing.Point(1125, 56);
+            this.imgBack.Name = "imgBack";
+            this.imgBack.ShadowDecoration.Parent = this.imgBack;
+            this.imgBack.Size = new System.Drawing.Size(50, 45);
+            this.imgBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgBack.TabIndex = 0;
+            this.imgBack.TabStop = false;
+            this.imgBack.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // guna2Elipse2
             // 
@@ -320,6 +320,7 @@ namespace WindowsFormsApp1.View.Screen
             this.priceProduct.Size = new System.Drawing.Size(156, 31);
             this.priceProduct.TabIndex = 21;
             this.priceProduct.Text = "PriceProduct";
+            this.priceProduct.Click += new System.EventHandler(this.priceProduct_Click);
             // 
             // description
             // 
@@ -358,7 +359,7 @@ namespace WindowsFormsApp1.View.Screen
             // panelCenter
             // 
             this.panelCenter.BackColor = System.Drawing.Color.White;
-            this.panelCenter.Controls.Add(this.guna2TextBox1);
+            this.panelCenter.Controls.Add(this.edtComment);
             this.panelCenter.Controls.Add(this.guna2PictureBox5);
             this.panelCenter.Controls.Add(this.label3);
             this.panelCenter.Location = new System.Drawing.Point(0, 516);
@@ -369,33 +370,34 @@ namespace WindowsFormsApp1.View.Screen
             this.panelCenter.TabIndex = 1;
             this.panelCenter.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCenter_Paint);
             // 
-            // guna2TextBox1
+            // edtComment
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(57, 148);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Add Comment";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(777, 46);
-            this.guna2TextBox1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox1.TabIndex = 34;
+            this.edtComment.BorderColor = System.Drawing.Color.Gray;
+            this.edtComment.BorderThickness = 2;
+            this.edtComment.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.edtComment.DefaultText = "";
+            this.edtComment.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.edtComment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.edtComment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.edtComment.DisabledState.Parent = this.edtComment;
+            this.edtComment.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.edtComment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.edtComment.FocusedState.Parent = this.edtComment;
+            this.edtComment.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.edtComment.ForeColor = System.Drawing.Color.Black;
+            this.edtComment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.edtComment.HoverState.Parent = this.edtComment;
+            this.edtComment.Location = new System.Drawing.Point(57, 148);
+            this.edtComment.Name = "edtComment";
+            this.edtComment.PasswordChar = '\0';
+            this.edtComment.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.edtComment.PlaceholderText = "Add Comment";
+            this.edtComment.SelectedText = "";
+            this.edtComment.ShadowDecoration.Parent = this.edtComment;
+            this.edtComment.Size = new System.Drawing.Size(777, 46);
+            this.edtComment.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.edtComment.TabIndex = 34;
+            this.edtComment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addCommentToSerer);
             // 
             // guna2PictureBox5
             // 
@@ -432,11 +434,11 @@ namespace WindowsFormsApp1.View.Screen
             this.Text = "DetailProduct";
             this.Load += new System.EventHandler(this.DetailProduct_LoadAsync);
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             this.headerHome.ResumeLayout(false);
             this.headerHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageProduct)).EndInit();
@@ -478,7 +480,7 @@ namespace WindowsFormsApp1.View.Screen
         private System.Windows.Forms.Label nameProduct;
         private Guna.UI2.WinForms.Guna2PictureBox imageProduct;
         private Guna.UI2.WinForms.Guna2Panel panelCenter;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox edtComment;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
         private System.Windows.Forms.Label label3;
     }

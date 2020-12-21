@@ -31,43 +31,20 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formParent));
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnFinace = new Guna.UI2.WinForms.Guna2Button();
             this.btnRestaurants = new Guna.UI2.WinForms.Guna2Button();
             this.btnOrders = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDashBoard = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbNameStore = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelUser = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDashBoard = new Guna.UI2.WinForms.Guna2Button();
+            this.avatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.AutoRoundedCorners = true;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnLogout.BorderRadius = 33;
-            this.btnLogout.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.btnLogout.CheckedState.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLogout.CheckedState.Parent = this.btnLogout;
-            this.btnLogout.CustomImages.Parent = this.btnLogout;
-            this.btnLogout.FillColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.HoverState.Parent = this.btnLogout;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(15, 708);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
-            this.btnLogout.Size = new System.Drawing.Size(206, 69);
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnFinace
             // 
@@ -135,31 +112,6 @@ namespace WindowsFormsApp1
             this.btnOrders.Text = "Orders";
             this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
-            // btnDashBoard
-            // 
-            this.btnDashBoard.AutoRoundedCorners = true;
-            this.btnDashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnDashBoard.BorderRadius = 33;
-            this.btnDashBoard.Checked = true;
-            this.btnDashBoard.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnDashBoard.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnDashBoard.CheckedState.Parent = this.btnDashBoard;
-            this.btnDashBoard.CustomImages.Parent = this.btnDashBoard;
-            this.btnDashBoard.FillColor = System.Drawing.Color.Transparent;
-            this.btnDashBoard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDashBoard.ForeColor = System.Drawing.Color.White;
-            this.btnDashBoard.HoverState.Parent = this.btnDashBoard;
-            this.btnDashBoard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashBoard.Image")));
-            this.btnDashBoard.Location = new System.Drawing.Point(15, 394);
-            this.btnDashBoard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDashBoard.Name = "btnDashBoard";
-            this.btnDashBoard.PressedColor = System.Drawing.Color.White;
-            this.btnDashBoard.ShadowDecoration.Parent = this.btnDashBoard;
-            this.btnDashBoard.Size = new System.Drawing.Size(206, 69);
-            this.btnDashBoard.TabIndex = 3;
-            this.btnDashBoard.Text = "DashBoard";
-            this.btnDashBoard.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,20 +141,6 @@ namespace WindowsFormsApp1
             this.lbNameStore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbNameStore.Click += new System.EventHandler(this.lbNameStore_Click);
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BorderRadius = 50;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(39, 164);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(150, 154);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 30;
@@ -214,7 +152,7 @@ namespace WindowsFormsApp1
             this.panelUser.Controls.Add(this.btnLogout);
             this.panelUser.Controls.Add(this.btnDashBoard);
             this.panelUser.Controls.Add(this.btnFinace);
-            this.panelUser.Controls.Add(this.guna2PictureBox1);
+            this.panelUser.Controls.Add(this.avatar);
             this.panelUser.Controls.Add(this.btnRestaurants);
             this.panelUser.Controls.Add(this.lbNameStore);
             this.panelUser.Controls.Add(this.btnOrders);
@@ -247,6 +185,68 @@ namespace WindowsFormsApp1
             this.guna2Panel2.TabIndex = 3;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.AutoRoundedCorners = true;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnLogout.BorderRadius = 33;
+            this.btnLogout.CheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.btnLogout.CheckedState.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogout.CheckedState.Parent = this.btnLogout;
+            this.btnLogout.CustomImages.Parent = this.btnLogout;
+            this.btnLogout.FillColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.HoverState.Parent = this.btnLogout;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(15, 708);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
+            this.btnLogout.Size = new System.Drawing.Size(206, 69);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnDashBoard
+            // 
+            this.btnDashBoard.AutoRoundedCorners = true;
+            this.btnDashBoard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnDashBoard.BorderRadius = 33;
+            this.btnDashBoard.Checked = true;
+            this.btnDashBoard.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnDashBoard.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnDashBoard.CheckedState.Parent = this.btnDashBoard;
+            this.btnDashBoard.CustomImages.Parent = this.btnDashBoard;
+            this.btnDashBoard.FillColor = System.Drawing.Color.Transparent;
+            this.btnDashBoard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDashBoard.ForeColor = System.Drawing.Color.White;
+            this.btnDashBoard.HoverState.Parent = this.btnDashBoard;
+            this.btnDashBoard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashBoard.Image")));
+            this.btnDashBoard.Location = new System.Drawing.Point(15, 394);
+            this.btnDashBoard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDashBoard.Name = "btnDashBoard";
+            this.btnDashBoard.PressedColor = System.Drawing.Color.White;
+            this.btnDashBoard.ShadowDecoration.Parent = this.btnDashBoard;
+            this.btnDashBoard.Size = new System.Drawing.Size(206, 69);
+            this.btnDashBoard.TabIndex = 3;
+            this.btnDashBoard.Text = "DashBoard";
+            this.btnDashBoard.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // avatar
+            // 
+            this.avatar.BorderRadius = 50;
+            this.avatar.Image = global::WindowsFormsApp1.Properties.Resources.imgUser;
+            this.avatar.Location = new System.Drawing.Point(39, 164);
+            this.avatar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.avatar.Name = "avatar";
+            this.avatar.ShadowDecoration.Parent = this.avatar;
+            this.avatar.Size = new System.Drawing.Size(150, 154);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatar.TabIndex = 0;
+            this.avatar.TabStop = false;
+            this.avatar.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
             // formParent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -263,9 +263,9 @@ namespace WindowsFormsApp1
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.formParent_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.formParent_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.formParent_MouseUp);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panelUser.ResumeLayout(false);
             this.panelUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,7 +275,7 @@ namespace WindowsFormsApp1
         private Guna.UI2.WinForms.Guna2Button btnDashBoard;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbNameStore;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox avatar;
         private Guna.UI2.WinForms.Guna2Button btnOrders;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnFinace;

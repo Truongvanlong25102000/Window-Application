@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
     public partial class formParent : Form
     {
         
-       
+        public static Guna.UI2.WinForms.Guna2CustomGradientPanel panelUsers;
         private bool drag=false;
         private Point startPoint = new Point(0, 0);
         public Dictionary<string, Product> mapProduct;
@@ -31,9 +31,8 @@ namespace WindowsFormsApp1
         public formParent()
         {
             InitializeComponent();
-            Config.Config.client = new FireSharp.FirebaseClient(Config.Config.config);
+            panelUsers = this.panelUser;
             // this.flowLayoutProduct.WrapContents = false;
-           
             this.Size = new Size(969,603);
             int locationn = (panelUser.Size.Width - lbNameStore.Size.Width) / 2;
             lbNameStore.Location = new Point(locationn, lbNameStore.Location.Y);
@@ -45,11 +44,17 @@ namespace WindowsFormsApp1
             btnFinace.Location = new Point(loactionButtonMenu, btnFinace.Location.Y);
             btnLogout.Location = new Point(loactionButtonMenu, btnLogout.Location.Y);
             loadData();
-
-            
-            //openChildForm(new LoginRegister(panelUser: this.panelUser));
+            // user pannel
+            checkIsLogin();
         }
 
+        private void checkIsLogin()
+        {
+            if (Config.Config.userName.Length>0)
+            {
+                
+            }
+        }
 
         private void openChildForm(Form childForm)
         {
@@ -150,8 +155,6 @@ namespace WindowsFormsApp1
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.TopMost = true;
-            
-
             Form currentChildForm =new LoginRegister(panelUser);
             currentChildForm.TopLevel = false;
             currentChildForm.FormBorderStyle = FormBorderStyle.None;

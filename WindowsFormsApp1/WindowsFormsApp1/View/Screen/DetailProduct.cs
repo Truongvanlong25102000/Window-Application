@@ -12,9 +12,10 @@ using WindowsFormsApp1.View.Item;
 
 namespace WindowsFormsApp1.View.Screen
 {
+    public delegate void DataSendHandler(bool isClick);
     public partial class DetailProductForm : Form
     {
-        Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser;
+        public event DataSendHandler addCmt;
         List<String> listImage=new List<string>();
         Product product;
         public DetailProductForm()
@@ -57,7 +58,7 @@ namespace WindowsFormsApp1.View.Screen
         public DetailProductForm(Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser)
         {
             InitializeComponent();
-            this.panelUser = panelUser;
+           // this.panelUser = panelUser;
            // panelUser.Visible = false;
         }
 
@@ -94,7 +95,7 @@ namespace WindowsFormsApp1.View.Screen
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            
+            //formParent.panelUsers.Visible = true;
             this.Close();
         }
 
@@ -206,6 +207,26 @@ namespace WindowsFormsApp1.View.Screen
         private void panelCenter_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void priceProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addCommentToSerer(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.Enter)&&edtComment.Text.Length>0)
+            {
+                if (Config.Config.userName.Length > 0)
+                {
+
+                }
+                else
+                {
+                    this.addCmt(true);
+                }
+            }
         }
     }
 }
