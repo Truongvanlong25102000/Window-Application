@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             this.btnFinace.ShadowDecoration.Parent = this.btnFinace;
             this.btnFinace.Size = new System.Drawing.Size(206, 69);
             this.btnFinace.TabIndex = 6;
-            this.btnFinace.Text = "Finace";
+            this.btnFinace.Text = "Manager";
             this.btnFinace.Click += new System.EventHandler(this.btnFinace_Click);
             // 
             // btnRestaurants
@@ -123,6 +123,7 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 2;
             this.label1.Text = "Hello Tony";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbNameStore
             // 

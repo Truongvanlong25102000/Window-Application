@@ -22,20 +22,25 @@ namespace WindowsFormsApp1.View.Screen
         public Home()
         {
             InitializeComponent();
+            LoadHomeScreen();
+        }
+
+        private void LoadHomeScreen()
+        {
             CheckIsLogin();
             avatarTopbar = this.avatarTopBar;
             Dictionary<string, ItemProduct> mapProduct1 = new Dictionary<string, ItemProduct>();
 
-            for(int i = 0; i < formParent.mapProduct.Count; i++)
+            for (int i = 0; i < formParent.mapProduct.Count; i++)
             {
                 formParent.mapProduct.Values.ElementAt(i).idProduct = formParent.mapProduct.Keys.ElementAt(i);
                 ItemProduct item = new ItemProduct(formParent.mapProduct.Values.ElementAt(i));
                 item.dataSend += Item_dataSend;
 
                 mapProduct1.Add(formParent.mapProduct.Values.ElementAt(i).nameProduct, item);
-               // Console.WriteLine("ABCABCABCABC: KEY : " + mapProduct.Values.ElementAt(i).idProduct);
+                // Console.WriteLine("ABCABCABCABC: KEY : " + mapProduct.Values.ElementAt(i).idProduct);
             }
-           
+
             PopularItem(mapProduct1);
         }
 
@@ -105,9 +110,13 @@ namespace WindowsFormsApp1.View.Screen
 
         }
 
-        private void flowLayoutProduct_Paint(object sender, PaintEventArgs e)
+        private async void flowLayoutProduct_Paint(object sender, PaintEventArgs e)
         {
-
+         //   Console.WriteLine("HOMEMEMEMEMEM");
+           // Config.Config.response = await Config.Config.client.GetTaskAsync("product/");
+            //formParent.mapProduct = Config.Config.response.ResultAs<Dictionary<string, Product>>();
+            //Console.WriteLine("HOMEMEMEMEMEM"+formParent.mapProduct.Values.ElementAt(2).price);
+            //LoadHomeScreen();
         }
 
         public void PopularItem(Dictionary<String, ItemProduct> mapProduct)

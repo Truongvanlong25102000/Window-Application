@@ -44,9 +44,16 @@ namespace WindowsFormsApp1
             btnRestaurants.Location = new Point(loactionButtonMenu, btnRestaurants.Location.Y);
             btnFinace.Location = new Point(loactionButtonMenu, btnFinace.Location.Y);
             btnLogout.Location = new Point(loactionButtonMenu, btnLogout.Location.Y);
-            loadData();
-            // user pannel
-            checkIsLogin();
+            System.Console.WriteLine("DAY LA MAIN");
+
+
+            //test
+            openChildForm(new StoreManager());
+            /*
+              loadData();
+             // user pannel
+             checkIsLogin();
+             */
 
         }
 
@@ -64,10 +71,10 @@ namespace WindowsFormsApp1
 
         private void openChildForm(Form childForm)
         {
-            if (currentChildForm != null)
+           /* if (currentChildForm != null)
             {
                 currentChildForm.Close();
-            }
+            }*/
             currentChildForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -164,7 +171,19 @@ namespace WindowsFormsApp1
         {
             btnFinace.Checked = true;
             setCheckedButton(btnFinace);
-            openChildForm(new LoginRegister());
+            openChildForm(new StoreManager());
+            /*
+            
+            StoreManager childForm = new StoreManager();
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+
+            this.guna2Panel2.Controls.Add(childForm);
+            this.guna2Panel2.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+
+             */
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -268,6 +287,11 @@ namespace WindowsFormsApp1
         }
 
         private void flowLayoutProduct_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
