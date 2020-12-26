@@ -34,7 +34,7 @@ namespace WindowsFormsApp1.View.Screen
             this.avatarTopBar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.searchView = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.headerHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatarTopBar)).BeginInit();
@@ -48,7 +48,7 @@ namespace WindowsFormsApp1.View.Screen
             this.headerHome.Controls.Add(this.avatarTopBar);
             this.headerHome.Controls.Add(this.guna2PictureBox3);
             this.headerHome.Controls.Add(this.guna2PictureBox2);
-            this.headerHome.Controls.Add(this.guna2TextBox2);
+            this.headerHome.Controls.Add(this.searchView);
             this.headerHome.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerHome.Location = new System.Drawing.Point(0, 0);
             this.headerHome.Name = "headerHome";
@@ -95,39 +95,39 @@ namespace WindowsFormsApp1.View.Screen
             this.guna2PictureBox2.TabIndex = 2;
             this.guna2PictureBox2.TabStop = false;
             // 
-            // guna2TextBox2
+            // searchView
             // 
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.guna2TextBox2.BorderRadius = 27;
-            this.guna2TextBox2.BorderThickness = 2;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconLeft")));
-            this.guna2TextBox2.IconLeftOffset = new System.Drawing.Point(15, 0);
-            this.guna2TextBox2.Location = new System.Drawing.Point(47, 50);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "Search";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(350, 56);
-            this.guna2TextBox2.TabIndex = 1;
-            this.guna2TextBox2.TextOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox2.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
+            this.searchView.AutoRoundedCorners = true;
+            this.searchView.BackColor = System.Drawing.Color.Transparent;
+            this.searchView.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.searchView.BorderRadius = 27;
+            this.searchView.BorderThickness = 2;
+            this.searchView.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchView.DefaultText = "";
+            this.searchView.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchView.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchView.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchView.DisabledState.Parent = this.searchView;
+            this.searchView.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(240)))), ((int)(((byte)(234)))));
+            this.searchView.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.searchView.FocusedState.Parent = this.searchView;
+            this.searchView.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchView.ForeColor = System.Drawing.Color.Gray;
+            this.searchView.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.searchView.HoverState.Parent = this.searchView;
+            this.searchView.IconLeft = ((System.Drawing.Image)(resources.GetObject("searchView.IconLeft")));
+            this.searchView.IconLeftOffset = new System.Drawing.Point(15, 0);
+            this.searchView.Location = new System.Drawing.Point(47, 50);
+            this.searchView.Name = "searchView";
+            this.searchView.PasswordChar = '\0';
+            this.searchView.PlaceholderText = "Search";
+            this.searchView.SelectedText = "";
+            this.searchView.ShadowDecoration.Parent = this.searchView;
+            this.searchView.Size = new System.Drawing.Size(350, 56);
+            this.searchView.TabIndex = 1;
+            this.searchView.TextOffset = new System.Drawing.Point(10, 0);
+            this.searchView.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // flowLayoutProduct
             // 
@@ -163,7 +163,7 @@ namespace WindowsFormsApp1.View.Screen
         private Guna.UI2.WinForms.Guna2Panel headerHome;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox searchView;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutProduct;
         private Guna.UI2.WinForms.Guna2PictureBox avatarTopBar;
     }

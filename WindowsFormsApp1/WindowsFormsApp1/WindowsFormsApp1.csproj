@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Directory.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Utils\Config.cs" />
     <Compile Include="Interface\ViewProduct.cs" />
@@ -100,6 +101,12 @@
     </Compile>
     <Compile Include="View\Item\ItemProduct.Designer.cs">
       <DependentUpon>ItemProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Item\TitleTableDictonary.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Item\TitleTableDictonary.Designer.cs">
+      <DependentUpon>TitleTableDictonary.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Screen\DirectoryManager.cs">
       <SubType>Form</SubType>
@@ -169,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Item\ItemProduct.resx">
       <DependentUpon>ItemProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Item\TitleTableDictonary.resx">
+      <DependentUpon>TitleTableDictonary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Screen\DetailProduct.resx">
       <DependentUpon>DetailProduct.cs</DependentUpon>
@@ -261,6 +271,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_home_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_home_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_Orders_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_Orders_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_shutdown_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_login_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_logout_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_store_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_store_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_adds.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

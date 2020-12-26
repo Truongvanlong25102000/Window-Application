@@ -44,6 +44,7 @@ namespace WindowsFormsApp1.View.Screen
         private void btnBack_Click(object sender, EventArgs e)
         {
             formParent.panelUsers.Visible = true;
+            this.Controls.Clear();
             this.Close();
         }
 

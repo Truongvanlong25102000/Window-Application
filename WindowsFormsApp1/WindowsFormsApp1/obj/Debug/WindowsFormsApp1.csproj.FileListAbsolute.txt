@@ -16,6 +16,7 @@ C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Item.ItemDirectory.resources
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Item.RowDirectory.resources
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Item.ItemProduct.resources
+C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Item.TitleTableDictonary.resources
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Screen.DetailProductForm.resources
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Screen.DirectoryManager.resources
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Screen.ErrorDialog.resources

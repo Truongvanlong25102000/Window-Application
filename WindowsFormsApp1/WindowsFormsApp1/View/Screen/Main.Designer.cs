@@ -30,10 +30,6 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formParent));
-            this.btnFinace = new Guna.UI2.WinForms.Guna2Button();
-            this.btnRestaurants = new Guna.UI2.WinForms.Guna2Button();
-            this.btnOrders = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbNameStore = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -41,76 +37,13 @@ namespace WindowsFormsApp1
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashBoard = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFinace = new Guna.UI2.WinForms.Guna2Button();
             this.avatar = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnRestaurants = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOrders = new Guna.UI2.WinForms.Guna2Button();
             this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnFinace
-            // 
-            this.btnFinace.AutoRoundedCorners = true;
-            this.btnFinace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnFinace.BorderRadius = 33;
-            this.btnFinace.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnFinace.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnFinace.CheckedState.Parent = this.btnFinace;
-            this.btnFinace.CustomImages.Parent = this.btnFinace;
-            this.btnFinace.FillColor = System.Drawing.Color.Transparent;
-            this.btnFinace.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnFinace.ForeColor = System.Drawing.Color.White;
-            this.btnFinace.HoverState.Parent = this.btnFinace;
-            this.btnFinace.Location = new System.Drawing.Point(15, 630);
-            this.btnFinace.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnFinace.Name = "btnFinace";
-            this.btnFinace.ShadowDecoration.Parent = this.btnFinace;
-            this.btnFinace.Size = new System.Drawing.Size(206, 69);
-            this.btnFinace.TabIndex = 6;
-            this.btnFinace.Text = "Manager";
-            this.btnFinace.Click += new System.EventHandler(this.btnFinace_Click);
-            // 
-            // btnRestaurants
-            // 
-            this.btnRestaurants.AutoRoundedCorners = true;
-            this.btnRestaurants.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnRestaurants.BorderRadius = 33;
-            this.btnRestaurants.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnRestaurants.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnRestaurants.CheckedState.Parent = this.btnRestaurants;
-            this.btnRestaurants.CustomImages.Parent = this.btnRestaurants;
-            this.btnRestaurants.FillColor = System.Drawing.Color.Transparent;
-            this.btnRestaurants.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnRestaurants.ForeColor = System.Drawing.Color.White;
-            this.btnRestaurants.HoverState.Parent = this.btnRestaurants;
-            this.btnRestaurants.Location = new System.Drawing.Point(15, 551);
-            this.btnRestaurants.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnRestaurants.Name = "btnRestaurants";
-            this.btnRestaurants.ShadowDecoration.Parent = this.btnRestaurants;
-            this.btnRestaurants.Size = new System.Drawing.Size(206, 69);
-            this.btnRestaurants.TabIndex = 5;
-            this.btnRestaurants.Text = "Restaurants";
-            this.btnRestaurants.Click += new System.EventHandler(this.btnRestaurants_Click);
-            // 
-            // btnOrders
-            // 
-            this.btnOrders.AutoRoundedCorners = true;
-            this.btnOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnOrders.BorderRadius = 33;
-            this.btnOrders.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnOrders.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnOrders.CheckedState.Parent = this.btnOrders;
-            this.btnOrders.CustomImages.Parent = this.btnOrders;
-            this.btnOrders.FillColor = System.Drawing.Color.Transparent;
-            this.btnOrders.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnOrders.ForeColor = System.Drawing.Color.White;
-            this.btnOrders.HoverState.Parent = this.btnOrders;
-            this.btnOrders.Location = new System.Drawing.Point(15, 473);
-            this.btnOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnOrders.Name = "btnOrders";
-            this.btnOrders.ShadowDecoration.Parent = this.btnOrders;
-            this.btnOrders.Size = new System.Drawing.Size(206, 69);
-            this.btnOrders.TabIndex = 4;
-            this.btnOrders.Text = "Orders";
-            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // label1
             // 
@@ -199,14 +132,18 @@ namespace WindowsFormsApp1
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.HoverState.Parent = this.btnLogout;
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
-            this.btnLogout.Location = new System.Drawing.Point(15, 708);
+            this.btnLogout.Image = global::WindowsFormsApp1.Properties.Resources.ic_login_white;
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageOffset = new System.Drawing.Point(4, 0);
+            this.btnLogout.Location = new System.Drawing.Point(9, 662);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
             this.btnLogout.Size = new System.Drawing.Size(206, 69);
             this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "Logout";
+            this.btnLogout.Text = "Login";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.TextOffset = new System.Drawing.Point(10, 0);
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnDashBoard
@@ -217,22 +154,55 @@ namespace WindowsFormsApp1
             this.btnDashBoard.Checked = true;
             this.btnDashBoard.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnDashBoard.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnDashBoard.CheckedState.Image = global::WindowsFormsApp1.Properties.Resources.ic_home_green;
             this.btnDashBoard.CheckedState.Parent = this.btnDashBoard;
             this.btnDashBoard.CustomImages.Parent = this.btnDashBoard;
             this.btnDashBoard.FillColor = System.Drawing.Color.Transparent;
             this.btnDashBoard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnDashBoard.ForeColor = System.Drawing.Color.White;
             this.btnDashBoard.HoverState.Parent = this.btnDashBoard;
-            this.btnDashBoard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashBoard.Image")));
-            this.btnDashBoard.Location = new System.Drawing.Point(15, 394);
-            this.btnDashBoard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDashBoard.Image = global::WindowsFormsApp1.Properties.Resources.ic_home_white;
+            this.btnDashBoard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashBoard.ImageOffset = new System.Drawing.Point(4, 0);
+            this.btnDashBoard.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnDashBoard.Location = new System.Drawing.Point(9, 425);
+            this.btnDashBoard.Margin = new System.Windows.Forms.Padding(0);
             this.btnDashBoard.Name = "btnDashBoard";
             this.btnDashBoard.PressedColor = System.Drawing.Color.White;
             this.btnDashBoard.ShadowDecoration.Parent = this.btnDashBoard;
             this.btnDashBoard.Size = new System.Drawing.Size(206, 69);
             this.btnDashBoard.TabIndex = 3;
             this.btnDashBoard.Text = "DashBoard";
+            this.btnDashBoard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashBoard.TextOffset = new System.Drawing.Point(4, 0);
             this.btnDashBoard.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // btnFinace
+            // 
+            this.btnFinace.AutoRoundedCorners = true;
+            this.btnFinace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnFinace.BorderRadius = 33;
+            this.btnFinace.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnFinace.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnFinace.CheckedState.Parent = this.btnFinace;
+            this.btnFinace.CustomImages.Parent = this.btnFinace;
+            this.btnFinace.FillColor = System.Drawing.Color.Transparent;
+            this.btnFinace.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnFinace.ForeColor = System.Drawing.Color.White;
+            this.btnFinace.HoverState.Parent = this.btnFinace;
+            this.btnFinace.Image = global::WindowsFormsApp1.Properties.Resources.ic_manager;
+            this.btnFinace.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFinace.ImageOffset = new System.Drawing.Point(4, 0);
+            this.btnFinace.Location = new System.Drawing.Point(9, 583);
+            this.btnFinace.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFinace.Name = "btnFinace";
+            this.btnFinace.ShadowDecoration.Parent = this.btnFinace;
+            this.btnFinace.Size = new System.Drawing.Size(206, 69);
+            this.btnFinace.TabIndex = 6;
+            this.btnFinace.Text = "Manager";
+            this.btnFinace.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFinace.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnFinace.Click += new System.EventHandler(this.btnFinace_Click);
             // 
             // avatar
             // 
@@ -247,6 +217,63 @@ namespace WindowsFormsApp1
             this.avatar.TabIndex = 0;
             this.avatar.TabStop = false;
             this.avatar.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
+            // btnRestaurants
+            // 
+            this.btnRestaurants.AutoRoundedCorners = true;
+            this.btnRestaurants.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnRestaurants.BorderRadius = 33;
+            this.btnRestaurants.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnRestaurants.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnRestaurants.CheckedState.Image = global::WindowsFormsApp1.Properties.Resources.ic_shutdown_green;
+            this.btnRestaurants.CheckedState.Parent = this.btnRestaurants;
+            this.btnRestaurants.CustomImages.Parent = this.btnRestaurants;
+            this.btnRestaurants.FillColor = System.Drawing.Color.Transparent;
+            this.btnRestaurants.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnRestaurants.ForeColor = System.Drawing.Color.White;
+            this.btnRestaurants.HoverState.Parent = this.btnRestaurants;
+            this.btnRestaurants.Image = global::WindowsFormsApp1.Properties.Resources.ic_shutdown;
+            this.btnRestaurants.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRestaurants.ImageOffset = new System.Drawing.Point(4, 0);
+            this.btnRestaurants.Location = new System.Drawing.Point(9, 741);
+            this.btnRestaurants.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRestaurants.Name = "btnRestaurants";
+            this.btnRestaurants.ShadowDecoration.Parent = this.btnRestaurants;
+            this.btnRestaurants.Size = new System.Drawing.Size(206, 69);
+            this.btnRestaurants.TabIndex = 5;
+            this.btnRestaurants.Text = "Exit";
+            this.btnRestaurants.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRestaurants.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnRestaurants.Click += new System.EventHandler(this.btnRestaurants_Click);
+            // 
+            // btnOrders
+            // 
+            this.btnOrders.AutoRoundedCorners = true;
+            this.btnOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnOrders.BorderRadius = 33;
+            this.btnOrders.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnOrders.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
+            this.btnOrders.CheckedState.Image = global::WindowsFormsApp1.Properties.Resources.ic_store_green;
+            this.btnOrders.CheckedState.Parent = this.btnOrders;
+            this.btnOrders.CustomImages.Parent = this.btnOrders;
+            this.btnOrders.FillColor = System.Drawing.Color.Transparent;
+            this.btnOrders.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnOrders.ForeColor = System.Drawing.Color.White;
+            this.btnOrders.HoverState.Parent = this.btnOrders;
+            this.btnOrders.Image = global::WindowsFormsApp1.Properties.Resources.ic_store_white;
+            this.btnOrders.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnOrders.ImageOffset = new System.Drawing.Point(4, 0);
+            this.btnOrders.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnOrders.Location = new System.Drawing.Point(9, 504);
+            this.btnOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.ShadowDecoration.Parent = this.btnOrders;
+            this.btnOrders.Size = new System.Drawing.Size(206, 69);
+            this.btnOrders.TabIndex = 4;
+            this.btnOrders.Text = "Store";
+            this.btnOrders.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnOrders.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // formParent
             // 

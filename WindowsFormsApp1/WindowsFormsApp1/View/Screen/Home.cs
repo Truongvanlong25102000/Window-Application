@@ -107,7 +107,10 @@ namespace WindowsFormsApp1.View.Screen
 
         private void headerHome_Paint(object sender, PaintEventArgs e)
         {
-
+            if (Config.Config.userName.Length > 1)
+            {
+                this.avatarTopBar.LoadAsync(Config.Config.user.avatar);
+            }
         }
 
         private async void flowLayoutProduct_Paint(object sender, PaintEventArgs e)

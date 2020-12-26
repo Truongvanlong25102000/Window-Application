@@ -63,6 +63,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_adds {
+            get {
+                object obj = ResourceManager.GetObject("ic_adds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_back {
             get {
                 object obj = ResourceManager.GetObject("ic_back", resourceCulture);
@@ -103,6 +113,56 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_home_green {
+            get {
+                object obj = ResourceManager.GetObject("ic_home_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_home_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_home_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_login_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_login_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_logout_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_logout_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_manager {
+            get {
+                object obj = ResourceManager.GetObject("ic_manager", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_notification {
             get {
                 object obj = ResourceManager.GetObject("ic_notification", resourceCulture);
@@ -126,6 +186,26 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap ic_order_white {
             get {
                 object obj = ResourceManager.GetObject("ic_order_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_Orders_green {
+            get {
+                object obj = ResourceManager.GetObject("ic_Orders_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_Orders_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_Orders_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +253,26 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_shutdown {
+            get {
+                object obj = ResourceManager.GetObject("ic_shutdown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_shutdown_green {
+            get {
+                object obj = ResourceManager.GetObject("ic_shutdown_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_Statistical_green {
             get {
                 object obj = ResourceManager.GetObject("ic_Statistical_green", resourceCulture);
@@ -186,6 +286,26 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap ic_Statistical_white {
             get {
                 object obj = ResourceManager.GetObject("ic_Statistical_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_store_green {
+            get {
+                object obj = ResourceManager.GetObject("ic_store_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_store_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_store_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

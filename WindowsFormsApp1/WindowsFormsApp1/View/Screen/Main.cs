@@ -48,12 +48,15 @@ namespace WindowsFormsApp1
 
 
             //test
-            openChildForm(new StoreManager());
+            // openChildForm(new StoreManager());
             /*
               loadData();
              // user pannel
              checkIsLogin();
              */
+            loadData();
+            // user pannel
+            checkIsLogin();
 
         }
 
@@ -85,7 +88,7 @@ namespace WindowsFormsApp1
             childForm.Show();
         }
 
-        public async Task updateValue()
+        public async void updateValue()
         {
             Store store;
 
@@ -129,12 +132,12 @@ namespace WindowsFormsApp1
             Config.Config.response = await Config.Config.client.GetTaskAsync("product/");
             mapProduct = Config.Config.response.ResultAs<Dictionary<string, Product>>();
 
-            await updateValue();
+            updateValue();
             loadFormHome();
         }
 
 
-        private async void guna2Button1_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             btnDashBoard.Checked = true;
             setCheckedButton(btnDashBoard);
@@ -162,15 +165,16 @@ namespace WindowsFormsApp1
 
         private void btnRestaurants_Click(object sender, EventArgs e)
         {
-            btnRestaurants.Checked = true;
-            setCheckedButton(btnRestaurants);
-            openChildForm(new LoginRegister());
+            /*    btnRestaurants.Checked = true;
+                setCheckedButton(btnRestaurants);
+                openChildForm(new LoginRegister());*/
+            Application.Exit();
         }
 
         private void btnFinace_Click(object sender, EventArgs e)
         {
-            btnFinace.Checked = true;
-            setCheckedButton(btnFinace);
+            //btnFinace.Checked = true;
+            //setCheckedButton(btnFinace);
             openChildForm(new StoreManager());
             /*
             
@@ -278,7 +282,16 @@ namespace WindowsFormsApp1
 
         private void panelUser_Paint(object sender, PaintEventArgs e)
         {
-
+            if (Config.Config.user != null)
+            {
+                this.btnLogout.Text = "Logout";
+                this.btnLogout.Image = Properties.Resources.ic_logout_white;
+            }
+            else
+            {
+                this.btnLogout.Text = "Login";
+                this.btnLogout.Image=Properties.Resources.ic_login_white;
+            }
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)

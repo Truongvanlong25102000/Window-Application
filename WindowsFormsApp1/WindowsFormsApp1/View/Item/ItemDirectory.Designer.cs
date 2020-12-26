@@ -31,12 +31,12 @@ namespace WindowsFormsApp1.View.Item
         {
             this.components = new System.ComponentModel.Container();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.imageDirectory = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageDirectory)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ShadowPanel1
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1.View.Item
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Controls.Add(this.imageDirectory);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -65,22 +65,22 @@ namespace WindowsFormsApp1.View.Item
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
-            // guna2PictureBox1
+            // imageDirectory
             // 
-            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.imageDirectory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2PictureBox1.BorderRadius = 18;
-            this.guna2PictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.loadingImage;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(238, 137);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            this.imageDirectory.BorderRadius = 18;
+            this.imageDirectory.Image = global::WindowsFormsApp1.Properties.Resources.loadingImage;
+            this.imageDirectory.Location = new System.Drawing.Point(6, 6);
+            this.imageDirectory.Margin = new System.Windows.Forms.Padding(0);
+            this.imageDirectory.Name = "imageDirectory";
+            this.imageDirectory.ShadowDecoration.Parent = this.imageDirectory;
+            this.imageDirectory.Size = new System.Drawing.Size(238, 137);
+            this.imageDirectory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageDirectory.TabIndex = 0;
+            this.imageDirectory.TabStop = false;
+            this.imageDirectory.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // ItemDirectory
             // 
@@ -93,7 +93,7 @@ namespace WindowsFormsApp1.View.Item
             this.Size = new System.Drawing.Size(250, 150);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageDirectory)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -103,6 +103,6 @@ namespace WindowsFormsApp1.View.Item
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox imageDirectory;
     }
 }
