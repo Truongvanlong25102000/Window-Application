@@ -16,7 +16,8 @@ namespace WindowsFormsApp1.Models
         public string nameProduct { get; set; }
         public string nameStore { get; set; }
         public string price { get; set; }
-        
+        public string number { get; set; }
+        public string nameDirectory { get; set; }
         public Product()
         {
 

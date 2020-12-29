@@ -34,19 +34,19 @@ namespace WindowsFormsApp1
             this.lbNameStore = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelUser = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashBoard = new Guna.UI2.WinForms.Guna2Button();
             this.btnFinace = new Guna.UI2.WinForms.Guna2Button();
             this.avatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnRestaurants = new Guna.UI2.WinForms.Guna2Button();
-            this.btnOrders = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(39, 338);
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 35);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Hello Tony";
+            this.label1.Text = "Hello";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -89,7 +89,6 @@ namespace WindowsFormsApp1
             this.panelUser.Controls.Add(this.avatar);
             this.panelUser.Controls.Add(this.btnRestaurants);
             this.panelUser.Controls.Add(this.lbNameStore);
-            this.panelUser.Controls.Add(this.btnOrders);
             this.panelUser.Controls.Add(this.label1);
             this.panelUser.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
@@ -109,16 +108,6 @@ namespace WindowsFormsApp1
             this.panelUser.MouseMove += new System.Windows.Forms.MouseEventHandler(this.formParent_MouseMove);
             this.panelUser.MouseUp += new System.Windows.Forms.MouseEventHandler(this.formParent_MouseUp);
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(234, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(1220, 928);
-            this.guna2Panel2.TabIndex = 3;
-            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
-            // 
             // btnLogout
             // 
             this.btnLogout.AutoRoundedCorners = true;
@@ -135,7 +124,7 @@ namespace WindowsFormsApp1
             this.btnLogout.Image = global::WindowsFormsApp1.Properties.Resources.ic_login_white;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageOffset = new System.Drawing.Point(4, 0);
-            this.btnLogout.Location = new System.Drawing.Point(9, 662);
+            this.btnLogout.Location = new System.Drawing.Point(13, 578);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
@@ -193,7 +182,7 @@ namespace WindowsFormsApp1
             this.btnFinace.Image = global::WindowsFormsApp1.Properties.Resources.ic_manager;
             this.btnFinace.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFinace.ImageOffset = new System.Drawing.Point(4, 0);
-            this.btnFinace.Location = new System.Drawing.Point(9, 583);
+            this.btnFinace.Location = new System.Drawing.Point(13, 499);
             this.btnFinace.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFinace.Name = "btnFinace";
             this.btnFinace.ShadowDecoration.Parent = this.btnFinace;
@@ -223,7 +212,7 @@ namespace WindowsFormsApp1
             this.btnRestaurants.AutoRoundedCorners = true;
             this.btnRestaurants.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
             this.btnRestaurants.BorderRadius = 33;
-            this.btnRestaurants.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnRestaurants.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
             this.btnRestaurants.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
             this.btnRestaurants.CheckedState.Image = global::WindowsFormsApp1.Properties.Resources.ic_shutdown_green;
             this.btnRestaurants.CheckedState.Parent = this.btnRestaurants;
@@ -235,7 +224,7 @@ namespace WindowsFormsApp1
             this.btnRestaurants.Image = global::WindowsFormsApp1.Properties.Resources.ic_shutdown;
             this.btnRestaurants.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnRestaurants.ImageOffset = new System.Drawing.Point(4, 0);
-            this.btnRestaurants.Location = new System.Drawing.Point(9, 741);
+            this.btnRestaurants.Location = new System.Drawing.Point(13, 657);
             this.btnRestaurants.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRestaurants.Name = "btnRestaurants";
             this.btnRestaurants.ShadowDecoration.Parent = this.btnRestaurants;
@@ -246,34 +235,15 @@ namespace WindowsFormsApp1
             this.btnRestaurants.TextOffset = new System.Drawing.Point(10, 0);
             this.btnRestaurants.Click += new System.EventHandler(this.btnRestaurants_Click);
             // 
-            // btnOrders
+            // guna2Panel2
             // 
-            this.btnOrders.AutoRoundedCorners = true;
-            this.btnOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnOrders.BorderRadius = 33;
-            this.btnOrders.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnOrders.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(160)))), ((int)(((byte)(98)))));
-            this.btnOrders.CheckedState.Image = global::WindowsFormsApp1.Properties.Resources.ic_store_green;
-            this.btnOrders.CheckedState.Parent = this.btnOrders;
-            this.btnOrders.CustomImages.Parent = this.btnOrders;
-            this.btnOrders.FillColor = System.Drawing.Color.Transparent;
-            this.btnOrders.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnOrders.ForeColor = System.Drawing.Color.White;
-            this.btnOrders.HoverState.Parent = this.btnOrders;
-            this.btnOrders.Image = global::WindowsFormsApp1.Properties.Resources.ic_store_white;
-            this.btnOrders.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOrders.ImageOffset = new System.Drawing.Point(4, 0);
-            this.btnOrders.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnOrders.Location = new System.Drawing.Point(9, 504);
-            this.btnOrders.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnOrders.Name = "btnOrders";
-            this.btnOrders.ShadowDecoration.Parent = this.btnOrders;
-            this.btnOrders.Size = new System.Drawing.Size(206, 69);
-            this.btnOrders.TabIndex = 4;
-            this.btnOrders.Text = "Store";
-            this.btnOrders.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOrders.TextOffset = new System.Drawing.Point(10, 0);
-            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2.Location = new System.Drawing.Point(234, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(1220, 928);
+            this.guna2Panel2.TabIndex = 3;
+            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // formParent
             // 
@@ -288,6 +258,7 @@ namespace WindowsFormsApp1
             this.Name = "formParent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.formParent_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.formParent_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.formParent_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.formParent_MouseUp);
@@ -304,7 +275,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbNameStore;
         private Guna.UI2.WinForms.Guna2PictureBox avatar;
-        private Guna.UI2.WinForms.Guna2Button btnOrders;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnFinace;
         private Guna.UI2.WinForms.Guna2Button btnRestaurants;

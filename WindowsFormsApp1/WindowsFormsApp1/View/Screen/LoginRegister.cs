@@ -48,7 +48,7 @@ namespace WindowsFormsApp1.View.Screen
                             Console.WriteLine("USERRRR: "+Config.Config.user.avatar);
                             this.lbError.Visible = false;
                             formParent.panelUsers.Visible = true;
-                            isLogin(true);
+                           // isLogin(true);
                             this.Close();
                         }
                         else
@@ -71,9 +71,6 @@ namespace WindowsFormsApp1.View.Screen
                     System.Console.WriteLine(ex.StackTrace.ToString());
                 }
                 
-
-                
-
 
             }
             else
@@ -126,6 +123,7 @@ namespace WindowsFormsApp1.View.Screen
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             formParent.panelUsers.Visible = true;
+            img.Visible = false;
             this.Close();
         }
 

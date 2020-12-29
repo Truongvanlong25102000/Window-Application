@@ -29,3 +29,6 @@ C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Item.ItemAddDirectory.resources
+C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Screen.ProductManager.resources
+C:\Users\truongvanlong\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.View.Item.ItemProductManager.resources

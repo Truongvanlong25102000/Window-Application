@@ -17,23 +17,43 @@ namespace WindowsFormsApp1.View.Screen
             InitializeComponent();
         }
 
+        dynamic currenForm;
+
         private void StoreManager_Load(object sender, EventArgs e)
         {
             this.Size = new Size(969, 603);
-            formParent.panelUsers.Visible = false;
+           // this.subLayoutParent.Size = new Size(969-formParent.panelUsers.Width,603);
+          //  this.subLayoutParent.Location = new Point(panelUser.Width, 0);
+              formParent.panelUsers.Visible =true;
             LoadForm();
         }
 
         private async Task LoadForm()
         {
-            DirectoryManager childForm = new DirectoryManager();
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
+            // this.TopMost = true;
 
-            this.guna2Panel2.Controls.Add(childForm);
-            this.guna2Panel2.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            /*DirectoryManager currenForm = new DirectoryManager();
+            currenForm.Location = new Point(0,0);
+            currenForm.TopLevel =false;
+            currenForm.FormBorderStyle = FormBorderStyle.None;
+            this.subPanel.Controls.Add(currenForm);
+             currenForm.Dock = DockStyle.Fill;
+            this.Tag = currenForm;
+            currenForm.BringToFront();
+            currenForm.Show();
+            */
+            this.btnDirectory.Checked = false;
+            this.btnProduct.Checked = true;
+            ProductManager currenForm = new ProductManager();
+            currenForm.Location = new Point(0, 0);
+            currenForm.TopLevel = false;
+            this.Controls.Add(currenForm);
+            currenForm.FormBorderStyle = FormBorderStyle.None;
+            this.subPanel.Controls.Add(currenForm);
+            currenForm.Dock = DockStyle.Fill;
+            this.Tag = currenForm;
+            currenForm.BringToFront();
+            currenForm.Show();
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)
@@ -50,14 +70,42 @@ namespace WindowsFormsApp1.View.Screen
 
         private void btnDirectory_Click(object sender, EventArgs e)
         {
-            DirectoryManager childForm = new DirectoryManager();
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
+            // this.TopMost = true;
+            btnProduct.Checked = false;
+            btnDirectory.Checked = true;
+            DirectoryManager currenForm = new DirectoryManager();
+            currenForm.Location = new Point(0, 0);
+            currenForm.TopLevel = false;
+            this.Controls.Add(currenForm);
+            currenForm.FormBorderStyle = FormBorderStyle.None;
+            this.subPanel.Controls.Add(currenForm);
+            currenForm.Dock = DockStyle.Fill;
+            this.Tag = currenForm;
+            currenForm.BringToFront();
+            currenForm.Show();
+        }
 
-            this.guna2Panel2.Controls.Add(childForm);
-            this.guna2Panel2.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+        private void subLayoutParent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void subLayoutParent_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void subPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            ProductManager currenForm = new ProductManager();
+            currenForm.TopLevel = false;
+            this.Controls.Add(currenForm);
+            currenForm.Show();
         }
     }
 }

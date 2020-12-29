@@ -107,6 +107,7 @@ namespace WindowsFormsApp1.View.Item
             this.imgStore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgStore.TabIndex = 10;
             this.imgStore.TabStop = false;
+            this.imgStore.Click += new System.EventHandler(this.imgStore_Click);
             this.imgStore.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ViewDetailProduct);
             // 
             // nameStore

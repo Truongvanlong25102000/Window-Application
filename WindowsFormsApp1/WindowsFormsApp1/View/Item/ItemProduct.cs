@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace WindowsFormsApp1.View.Item
         public ItemProduct()
         {
             InitializeComponent();
+            this.imageProduct.Image = Properties.Resources.loadingImage;
         }
 
         public ItemProduct(Product product)
@@ -30,15 +32,18 @@ namespace WindowsFormsApp1.View.Item
             imageProduct.Size = new Size(100, 85);
             priceProduct.Text = product.price;
             nameStore.Text = product.nameStore;
-            System.Console.WriteLine("AHHAHAHAHAH" + product.price);
-            System.Console.WriteLine("AHHAHAHAHAH" + product.nameStore);
             nameProduct.Text= this.product.nameProduct;
-           foreach(String a in product.image.Values)
-            {
-                System.Console.WriteLine("AHHAHAHAHAH" + a);
-                imageProduct.Load(a);
-            }
-           
+            /*foreach(string a in product.image.Values)
+             {
+                 System.Console.WriteLine("AHHAHAHAHAH" + a);
+                 imageProduct.Load(a);
+             }*/
+
+            byte[] b = Convert.FromBase64String(product.image.Values.ElementAt(0));
+            MemoryStream ms = new MemoryStream();
+            ms.Write(b, 0, Convert.ToInt32(b.Length));
+            imageProduct.Image= new Bitmap(ms, false);
+            Console.WriteLine("DSFJDSFJDFSJDSFJDFSJ", product.imageStore);
         }
 
        
@@ -130,6 +135,11 @@ namespace WindowsFormsApp1.View.Item
         }
 
         private void panelPrice_name_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void imgStore_Click(object sender, EventArgs e)
         {
 
         }

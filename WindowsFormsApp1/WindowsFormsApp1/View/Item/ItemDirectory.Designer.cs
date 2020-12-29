@@ -71,6 +71,7 @@ namespace WindowsFormsApp1.View.Item
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.imageDirectory.BorderRadius = 18;
+            this.imageDirectory.ErrorImage = global::WindowsFormsApp1.Properties.Resources.loadingImage;
             this.imageDirectory.Image = global::WindowsFormsApp1.Properties.Resources.loadingImage;
             this.imageDirectory.Location = new System.Drawing.Point(6, 6);
             this.imageDirectory.Margin = new System.Windows.Forms.Padding(0);

@@ -13,9 +13,16 @@ namespace WindowsFormsApp1.Models
         public string name { get; set; }
         public string id { get; set; }
 
+        public bool isNew = false;
+
         public Directory()
         {
 
+        }
+
+        public void SetStateDirectory(bool state)
+        {
+            isNew = state;
         }
     }
 }

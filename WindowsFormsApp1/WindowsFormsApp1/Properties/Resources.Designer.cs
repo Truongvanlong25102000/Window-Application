@@ -63,6 +63,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bafood {
+            get {
+                object obj = ResourceManager.GetObject("bafood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_adds {
             get {
                 object obj = ResourceManager.GetObject("ic_adds", resourceCulture);
@@ -86,6 +96,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap ic_cart {
             get {
                 object obj = ResourceManager.GetObject("ic_cart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_delete {
+            get {
+                object obj = ResourceManager.GetObject("ic_delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,6 +263,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_push {
+            get {
+                object obj = ResourceManager.GetObject("ic_push", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_remove {
             get {
                 object obj = ResourceManager.GetObject("ic_remove", resourceCulture);
@@ -306,6 +336,16 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap ic_store_white {
             get {
                 object obj = ResourceManager.GetObject("ic_store_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_update {
+            get {
+                object obj = ResourceManager.GetObject("ic_update", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

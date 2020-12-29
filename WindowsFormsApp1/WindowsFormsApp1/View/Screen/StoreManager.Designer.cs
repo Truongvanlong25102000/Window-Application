@@ -31,19 +31,17 @@ namespace WindowsFormsApp1.View.Screen
         {
             this.components = new System.ComponentModel.Container();
             this.connerFormParent = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelUser = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.ratingBar = new Guna.UI2.WinForms.Guna2RatingStar();
-            this.subLayoutParent = new Guna.UI2.WinForms.Guna2Panel();
             this.btnBack = new Guna.UI2.WinForms.Guna2Button();
             this.btnDirectory = new Guna.UI2.WinForms.Guna2Button();
             this.btnStatistical = new Guna.UI2.WinForms.Guna2Button();
             this.avatar = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnOrder = new Guna.UI2.WinForms.Guna2Button();
             this.btnProduct = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel2.SuspendLayout();
+            this.subPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.panelUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
@@ -52,17 +50,6 @@ namespace WindowsFormsApp1.View.Screen
             // 
             this.connerFormParent.BorderRadius = 30;
             this.connerFormParent.TargetControl = this;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.subLayoutParent);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(234, 0);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(986, 928);
-            this.guna2Panel2.TabIndex = 5;
-            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
             // label1
             // 
@@ -114,15 +101,6 @@ namespace WindowsFormsApp1.View.Screen
             this.ratingBar.Size = new System.Drawing.Size(162, 40);
             this.ratingBar.TabIndex = 0;
             this.ratingBar.Value = 3F;
-            // 
-            // subLayoutParent
-            // 
-            this.subLayoutParent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.subLayoutParent.Location = new System.Drawing.Point(0, 0);
-            this.subLayoutParent.Name = "subLayoutParent";
-            this.subLayoutParent.ShadowDecoration.Parent = this.subLayoutParent;
-            this.subLayoutParent.Size = new System.Drawing.Size(986, 928);
-            this.subLayoutParent.TabIndex = 0;
             // 
             // btnBack
             // 
@@ -279,6 +257,17 @@ namespace WindowsFormsApp1.View.Screen
             this.btnProduct.Text = "Products";
             this.btnProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProduct.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
+            // subPanel
+            // 
+            this.subPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.subPanel.Location = new System.Drawing.Point(234, 0);
+            this.subPanel.Name = "subPanel";
+            this.subPanel.ShadowDecoration.Parent = this.subPanel;
+            this.subPanel.Size = new System.Drawing.Size(986, 928);
+            this.subPanel.TabIndex = 5;
+            this.subPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.subPanel_Paint);
             // 
             // StoreManager
             // 
@@ -286,13 +275,13 @@ namespace WindowsFormsApp1.View.Screen
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1220, 928);
-            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.subPanel);
             this.Controls.Add(this.panelUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StoreManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StoreManager";
             this.Load += new System.EventHandler(this.StoreManager_Load);
-            this.guna2Panel2.ResumeLayout(false);
             this.panelUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
@@ -302,7 +291,6 @@ namespace WindowsFormsApp1.View.Screen
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse connerFormParent;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser;
         private Guna.UI2.WinForms.Guna2RatingStar ratingBar;
         private Guna.UI2.WinForms.Guna2Button btnBack;
@@ -313,6 +301,6 @@ namespace WindowsFormsApp1.View.Screen
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btnDirectory;
-        private Guna.UI2.WinForms.Guna2Panel subLayoutParent;
+        private Guna.UI2.WinForms.Guna2Panel subPanel;
     }
 }

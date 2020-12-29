@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,33 +29,53 @@ namespace WindowsFormsApp1.View.Screen
         {
             InitializeComponent();
             this.product = product;
-            loadData();
+            loadData(product);
         }
 
-        async private void loadData()
+        async private void loadData(Product product)
         {
             this.imageProduct.Image = Properties.Resources.loadingImage;
             this.imgStore.Image= Properties.Resources.loadingImage;
             this.titleForm.Text = titleForm.Text + product.nameProduct;
-            foreach (string i in product.image.Values)
+
+            loadImageByte(imageProduct,0);
+            loadImageByte(imageProduct1,0);
+            if (product.image.Count == 2)
             {
-                listImage.Add(i);
-            }
-            this.imageProduct.LoadAsync(listImage[0]);
-            this.imageProduct1.LoadAsync(listImage[0]);
-            if (listImage.Count >= 2)
-            {
-                this.imageProduct2.LoadAsync(listImage[1]);
-                this.imageProduct3.LoadAsync(listImage[2]);
+                loadImageByte(imageProduct2, 1);
+
             }
 
+            if (product.image.Count == 3)
+            {
+                loadImageByte(imageProduct3, 2);
+
+            }
             this.nameProduct.Text = product.nameProduct;
             this.priceProduct.Text = product.price;
             this.description.Text = product.description;
-            this.imgStore.LoadAsync(product.imageStore);
+            
+
             this.nameStore.Text = product.nameStore;
             this.lbAddressStore.Text = product.address;
         }
+
+        private void loadImageByte(Guna.UI2.WinForms.Guna2PictureBox pictureBox,int index)
+        {
+
+            if (index == -1)
+            {
+                
+            }
+            else
+            {
+                byte[] b = Convert.FromBase64String(product.image.Values.ElementAt(index));
+                MemoryStream ms = new MemoryStream();
+                ms.Write(b, 0, Convert.ToInt32(b.Length));
+                pictureBox.Image = new Bitmap(ms, false);
+            }
+        }
+        
 
         public DetailProductForm(Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser)
         {
@@ -80,15 +101,18 @@ namespace WindowsFormsApp1.View.Screen
            
             ItemComment item;
             int count = 0;
-            foreach(String idComment in product.comment.Values)
+            if (product.comment != null)
             {
-                count++;
-                if (count == product.comment.Count)
-                    break;
-                item = new ItemComment(idComment);
-                flowLayoutParent.Controls.Add(item);
-                item.Top = top;
-                top = (item.Top + item.Height + 40);
+                foreach (String idComment in product.comment.Values)
+                {
+                    count++;
+                    if (count == product.comment.Count)
+                        break;
+                    item = new ItemComment(idComment);
+                    flowLayoutParent.Controls.Add(item);
+                    item.Top = top;
+                    top = (item.Top + item.Height + 40);
+                }
             }
             
             flowLayoutParent.AutoScroll = true;
@@ -200,7 +224,7 @@ namespace WindowsFormsApp1.View.Screen
         private void imageProduct1_Click(object sender, EventArgs e)
         {
             this.imageProduct.Image = Properties.Resources.loadingImage;
-            this.imageProduct.LoadAsync(listImage[0]);
+            loadImageByte(imageProduct, 0);
         }
 
         private void imgStore_Click_1(object sender, EventArgs e)

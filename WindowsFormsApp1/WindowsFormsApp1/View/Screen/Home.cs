@@ -38,7 +38,7 @@ namespace WindowsFormsApp1.View.Screen
                 item.dataSend += Item_dataSend;
 
                 mapProduct1.Add(formParent.mapProduct.Values.ElementAt(i).nameProduct, item);
-                // Console.WriteLine("ABCABCABCABC: KEY : " + mapProduct.Values.ElementAt(i).idProduct);
+                Console.WriteLine("ABCABCABCABC: KEY : " + formParent.mapProduct.Values.ElementAt(i).imageStore);
             }
 
             PopularItem(mapProduct1);
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1.View.Screen
             {
                 this.Size = new Size(969, 603);
                 formParent.panelUsers.Visible = false;
-                this.TopMost = true;
+              //  this.TopMost = true;
                 LoginRegister currentChildForm = new LoginRegister();
                 currentChildForm.isLogin += CurrentChildForm_isLogin;
                 currentChildForm.TopLevel = false;
@@ -92,9 +92,9 @@ namespace WindowsFormsApp1.View.Screen
         private void CurrentChildForm_isLogin(bool isClick)
         {
             Home.avatarTopbar.Image = Properties.Resources.loadingImage;
-            Home.avatarTopbar.LoadAsync(Config.Config.user.avatar);
-            formParent.imgAvatar.Image= Properties.Resources.loadingImage;
-            formParent.imgAvatar.LoadAsync(Config.Config.user.avatar);
+           // Home.avatarTopbar.LoadAsync(Config.Config.user.avatar);
+          //  formParent.imgAvatar.Image= Properties.Resources.loadingImage;
+           //  formParent.imgAvatar.LoadAsync(Config.Config.user.avatar);
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1.View.Screen
             }
         }
 
-        private async void flowLayoutProduct_Paint(object sender, PaintEventArgs e)
+        private void flowLayoutProduct_Paint(object sender, PaintEventArgs e)
         {
          //   Console.WriteLine("HOMEMEMEMEMEM");
            // Config.Config.response = await Config.Config.client.GetTaskAsync("product/");

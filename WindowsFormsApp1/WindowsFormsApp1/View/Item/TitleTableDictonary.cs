@@ -22,8 +22,8 @@ namespace WindowsFormsApp1.View.Item
         public TitleTableDictonary()
         {
             InitializeComponent();
-            this.Size = new Size(560,lbIndex.Height+30);
-            this.subLayoutParent.Size=new Size(560, lbIndex.Height+30);
+            this.Size = new Size(610,lbIndex.Height+30);
+            this.subLayoutParent.Size=new Size(610, lbIndex.Height+30);
             this.lbIndex.Location = new Point(0, 15);
             this.lbName.Location = new Point(30 + lbIndex.Width, 15);
             this.countProduct.Location = new Point(55 + lbIndex.Width + lbName.Width, 15);

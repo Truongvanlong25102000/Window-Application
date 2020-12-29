@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -72,6 +87,12 @@
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Store.cs" />
+    <Compile Include="View\Item\ItemAddDirectory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Item\ItemAddDirectory.Designer.cs">
+      <DependentUpon>ItemAddDirectory.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Item\ItemAddProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -89,6 +110,12 @@
     </Compile>
     <Compile Include="View\Item\ItemDirectory.Designer.cs">
       <DependentUpon>ItemDirectory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Item\ItemProductManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Item\ItemProductManager.Designer.cs">
+      <DependentUpon>ItemProductManager.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Item\RowDirectory.cs">
       <SubType>UserControl</SubType>
@@ -146,6 +173,12 @@
     <Compile Include="View\Screen\DetailProduct.Designer.cs">
       <DependentUpon>DetailProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Screen\ProductManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Screen\ProductManager.Designer.cs">
+      <DependentUpon>ProductManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Screen\StoreManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +195,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\Item\ItemAddDirectory.resx">
+      <DependentUpon>ItemAddDirectory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Item\ItemAddProduct.resx">
       <DependentUpon>ItemAddProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Item\ItemDirectory.resx">
       <DependentUpon>ItemDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Item\ItemProductManager.resx">
+      <DependentUpon>ItemProductManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Item\RowDirectory.resx">
       <DependentUpon>RowDirectory.cs</DependentUpon>
@@ -197,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Screen\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Screen\ProductManager.resx">
+      <DependentUpon>ProductManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Screen\StoreManager.resx">
       <DependentUpon>StoreManager.cs</DependentUpon>
@@ -307,6 +349,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_adds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_push.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bafood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
